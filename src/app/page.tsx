@@ -4,11 +4,15 @@ import { Header } from "@/components/Header";
 export default function Home() {
 
   return (
-    <main className="bg-black">
+    <main className="h-200" style={{ backgroundImage: "url('/topbg.png')", backgroundSize: 'cover', backgroundPosition: 'top', backgroundRepeat: 'no-repeat' }}>
       <Header />
       <Image src="/next.svg" alt="Next.js logo" width={100} height={20} />
-      <h1>Starting project</h1>
-      <p>This is the home page content.</p>
+      <section>
+      <p>Hello, I'm</p>
+      <h1>José Pedro.</h1>
+      <h2>Full Stack Developer</h2>
+      <p>I build exceptional digital experiences that are fast, accessible, and visually appealing.</p>
+      </section>
     </main>
   );
 }

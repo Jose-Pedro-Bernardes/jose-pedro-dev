@@ -5,7 +5,7 @@ import { Moon } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between bg-black pt-4 px-10">
+    <header className="flex items-center justify-between pt-4 px-10">
       <div className="flex items-center gap-40">
         <Link href="/">
           <Image
