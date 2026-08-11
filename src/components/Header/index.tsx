@@ -5,8 +5,8 @@ import { Moon } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between pt-4 px-10">
-      <div className="flex items-center gap-40">
+    <header className="flex justify-between pt-4 px-20">
+      <div className="flex items-center gap-30">
         <Link href="/">
           <Image
             src="/assets/logo.png"
@@ -18,10 +18,10 @@ export function Header() {
         </Link>
 
         <nav aria-label="Navegação principal">
-          <ul className="flex gap-6">
+          <ul className="flex gap-15">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
-                <Link href={href} className="text-[1rem] text-white/80 hover:text-white transition-colors">
+                <Link href={href} className="text-[1rem] text-white/70 hover:text-white transition-colors">
                   {label}
                 </Link>
               </li>
