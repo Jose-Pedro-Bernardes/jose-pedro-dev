@@ -14,7 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio -- Dev Bernardes",
-  description: "Full stack developer portfolio showcasing React, Next.js and TypeScript projects. Building fast, well-crafted web interfaces.",
+  description:
+    "Full stack developer portfolio showcasing React, Next.js and TypeScript projects. " +
+    "Building fast, well-crafted web interfaces.",
 };
 
 export default function RootLayout({
