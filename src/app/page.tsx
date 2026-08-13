@@ -1,32 +1,57 @@
 import { Header } from "@/components/Header";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen bg-black overflow-hidden">
       <main
-        className="h-screen"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('/topbg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+        className="relative h-screen bg-black z-0">
+
         <Header />
+        
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-[60%] h-[60%]">
+          <div
+            className="relative w-full h-full rounded-3xl overflow-hidden animate-spin-slow"
+            style={{
+              maskImage: "radial-gradient(circle, black 40%, transparent 75%)",
+              WebkitMaskImage:
+                "radial-gradient(circle, black 40%, transparent 40%)",
+            }}
+          >
+            <Image
+              src="/assets/bgImersive.png"
+              width={700}
+              height={700}
+              alt="side object"
+              className="absolute w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
-        <section className="font-dm-sans flex flex-col gap-[13px] mt-20 ml-20">
-          <p className="text-[1.75rem] text-white/70">Hello, I&apos;m</p>
+        <section className="font-dm-sans flex flex-col gap-[13px] mt-15 ml-20">
 
-          <h1 className="text-[4.3rem] font-semibold text-white/95">
-            José Pedro<span className="text-[#ffea00]">.</span>
-          </h1>
+        <h1 className="text-[4rem] font-semibold text-white/95">
+          CODE you can see.
+          <span className="relative text-[#ffea00]">
+            .
+            <span
+              className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-white"
+              style={{ transform: "rotate(90deg)" }}
+              aria-hidden="true"
+            >
+              )
+            </span>
+          </span>
 
-          <h2 className="text-[1.75rem] text-yellow-300 font-medium">
-            Full Stack Developer
+          <br />
+          SOLUTIONS you can experience.
+        </h1>
+
+          <h2 className="text-[1.5rem] text-yellow-300 font-medium">
+            Interfaces, experiences, and digital products built with intention.
           </h2>
 
-          <p className="max-w-[350px] text-[1.1rem] text-white/85">
+          <p className="max-w-[400px] text-[1.1rem] text-white/85">
             <span className="text-[#D6B56A]">Coffee-powered</span>, mostly.{" "}
             <span className="text-[#D6B56A]">Bugs don&apos;t stand a chance</span>{" "}
             after the second cup.
