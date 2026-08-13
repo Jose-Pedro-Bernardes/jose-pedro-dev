@@ -1,34 +1,17 @@
 import { Header } from "@/components/Header";
-import Image from "next/image";
+import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-black overflow-hidden">
+    <div className="h-screen bg-black">
       <main
-        className="relative h-screen bg-black z-0">
+        className="relative h-screen bg-black z-0 overflow-hidden">
 
         <Header />
         
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-[60%] h-[60%]">
-          <div
-            className="relative w-full h-full rounded-3xl overflow-hidden animate-spin-slow"
-            style={{
-              maskImage: "radial-gradient(circle, black 40%, transparent 75%)",
-              WebkitMaskImage:
-                "radial-gradient(circle, black 40%, transparent 40%)",
-            }}
-          >
-            <Image
-              src="/assets/bgImersive.png"
-              width={700}
-              height={700}
-              alt="side object"
-              className="absolute w-full h-full object-cover"
-            />
-          </div>
-        </div>
+        <ImersiveBG />
 
-        <section className="font-dm-sans flex flex-col gap-[13px] mt-15 ml-20">
+        <section className="font-dm-sans flex flex-col gap-[13px] mt-25 ml-20">
 
         <h1 className="text-[4rem] font-semibold text-white/95">
           CODE you can see.
@@ -108,6 +91,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <div className="h-[100px]"></div>
     </div>
   );
 }
