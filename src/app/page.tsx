@@ -11,9 +11,9 @@ export default function Home() {
         
         <ImersiveBG />
 
-        <section className="font-dm-sans flex flex-col gap-[13px] mt-25 ml-20">
+        <section className="font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
 
-        <h1 className="text-[4rem] font-semibold text-white/95">
+        <h1 className="text-[3.5rem] font-semibold text-white/95">
           CODE you can see.
           <span className="relative text-[#ffea00]">
             .
