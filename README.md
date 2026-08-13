@@ -1,8 +1,3 @@
-Dev Bernardes — Portfólio
-
-<img width="1917" height="936" alt="image" src="https://github.com/user-attachments/assets/73e4da85-3229-479f-a26a-befb2f2aad12" />
-
-
 Portfólio pessoal de José Pedro Bernardes, desenvolvedor full stack, construído com Next.js e Tailwind CSS.
 
 🚀 Stack
