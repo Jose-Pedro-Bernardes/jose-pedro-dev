@@ -1,20 +1,41 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/nav-links";
-import Image from "next/image";
 import Link from "next/link";
 import { Moon } from "lucide-react";
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 20);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="flex justify-between pt-4 px-20">
+<header
+  className={`
+    fixed top-0 left-0 w-full z-50
+    flex justify-between
+    pt-4 px-20 pb-4
+    transition-[background-color,backdrop-filter] duration-300
+    ${
+      scrolled
+        ? "bg-black/80 backdrop-blur-md border-b border-yellow-400/20"
+        : "bg-transparent border-b border-transparent"
+    }
+  `}
+>
       <div className="flex items-center gap-30">
         <Link href="/">
-          <Image
-            src="/assets/logo.png"
-            alt="Logo Dev Bernardes"
-            width={182}
-            height={20}
-            className="h-auto w-auto"
-          />
+          <p className="text-white/95 text-[1.5rem]">
+            JPD<span className="text-yellow-400">.</span>
+          </p>
         </Link>
 
         <nav aria-label="Navegação principal">
