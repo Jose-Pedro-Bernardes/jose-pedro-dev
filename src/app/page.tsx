@@ -3,9 +3,9 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen bg-[var(--bg-primary)]">
       <main
-        className="relative h-screen bg-black z-0 overflow-hidden">
+        className="relative h-screen bg-[var(--bg-primary)] z-0 overflow-hidden">
 
         <Header />
         
@@ -30,9 +30,10 @@ export default function Home() {
           SOLUTIONS you can experience.
         </h1>
 
-          <h2 className="text-[1.5rem] text-yellow-300 font-medium">
-            Interfaces, experiences, and digital products built with intention.
-          </h2>
+<h2 className="font-dm-sans text-[1.6rem] font-bold">
+  <span className="text-white">José Pedro Bernardes</span>
+  <span className="text-[#D6B56A]"> · Full Stack Developer</span>
+</h2>
 
           <p className="max-w-[400px] text-[1.1rem] text-white/85">
             <span className="text-[#D6B56A]">Coffee-powered</span>, mostly.{" "}
@@ -76,8 +77,8 @@ export default function Home() {
 
             <button
               className="
-                px-5 py-3
-                rounded-3xl border border-[1.5px] border-white/80
+                px-6 py-5
+                rounded-full border border-[1.5px] border-white/80
                 bg-transparent
                 font-medium font-bold text-white/80
                 transition-all duration-300
