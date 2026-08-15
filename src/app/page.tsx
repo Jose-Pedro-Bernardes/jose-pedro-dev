@@ -3,9 +3,9 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[var(--bg-primary)]">
+    <div className="h-[650px] bg-[image:var(--bg-primary)])]">
       <main
-        className="relative h-screen bg-[var(--bg-primary)] z-0 overflow-hidden">
+        className="relative h-[100%] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
 
         <Header />
         
