@@ -15,15 +15,15 @@
 
 :root {
   /* light (padrão) */
-  --bg-primary: #ffffff;
+  --bg-primary: linear-gradient(to right, #ddddd7, #0e0e00b1);
   --text-primary: #0a0a0a;
   --text-secondary: rgba(10, 10, 10, 0.75);
-  --accent: #d4a900;      /* ffea00 escurecido p/ contraste no branco */
+  --accent: #f4f3f1;      /* ffea00 escurecido p/ contraste no branco */
   --accent-soft: #a3792f; /* D6B56A escurecido */
 }
 
 .dark {
-  --bg-primary: #000000;
+  --bg-primary: linear-gradient(to right, #171600, #000000);
   --text-primary: rgba(255, 255, 255, 0.95);
   --text-secondary: rgba(255, 255, 255, 0.85);
   --accent: #ffea00;

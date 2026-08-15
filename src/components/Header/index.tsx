@@ -66,7 +66,7 @@ export function Header() {
         className="
           flex items-center justify-center
           w-[60px] p-2.5
-          rounded-xl border border-[var(--text-primary)]/25
+          rounded-xl border border-[var(--accent)]/25
           text-[var(--text-primary)]
           hover:bg-[var(--text-primary)]/10
           transition-colors
