@@ -27,7 +27,7 @@ export default function Home() {
           </span>
 
           <br />
-          SOLUTIONS you can experience.
+          SOLUTIONS & experience<span className="text-[#ffea00]">.</span>
         </h1>
 
 <h2 className="font-dm-sans text-[1.6rem] font-bold">
