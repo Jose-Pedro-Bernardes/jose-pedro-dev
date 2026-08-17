@@ -3,7 +3,7 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="h-[650px] bg-[image:var(--bg-primary)])]">
+    <div className="h-[100vh] max-h-[650px] bg-[image:var(--bg-primary)])]">
       <main
         className="relative h-[100%] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
 
@@ -13,12 +13,12 @@ export default function Home() {
 
         <section className="font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
 
-        <h1 className="text-[3.5rem] font-semibold text-white/95">
+        <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
           CODE you can see.
-          <span className="relative text-[#ffea00]">
+          <span className="relative text-[var(--accent1)]">
             .
             <span
-              className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-white"
+              className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
               style={{ transform: "rotate(90deg)" }}
               aria-hidden="true"
             >
@@ -27,17 +27,17 @@ export default function Home() {
           </span>
 
           <br />
-          SOLUTIONS & experience<span className="text-[#ffea00]">.</span>
+          SOLUTIONS & experience<span className="text-[var(--accent1)]">.</span>
         </h1>
 
 <h2 className="font-dm-sans text-[1.6rem] font-bold">
-  <span className="text-white">José Pedro Bernardes</span>
-  <span className="text-[#D6B56A]"> · Full Stack Developer</span>
+  <span className="text-[var(--text-primary)]">José Pedro Bernardes</span>
+  <span className="text-[var(--accent-soft)]"> · Full Stack Developer</span>
 </h2>
 
-          <p className="max-w-[400px] text-[1.1rem] text-white/85">
-            <span className="text-[#D6B56A]">Coffee-powered</span>, mostly.{" "}
-            <span className="text-[#D6B56A]">Bugs don&apos;t stand a chance</span>{" "}
+          <p className="max-w-[400px] text-[1.1rem] text-[var(--text-primary)]">
+            <span className="text-[var(--accent-soft)]">Coffee-powered</span>, mostly.{" "}
+            <span className="text-[var(--accent-soft)]">Bugs don&apos;t stand a chance</span>{" "}
             after the second cup.
           </p>
 
@@ -78,9 +78,9 @@ export default function Home() {
             <button
               className="
                 px-6 py-5
-                rounded-full border border-[1.5px] border-white/80
+                rounded-full border border-[1.5px] border-[var(--text-primary)]/80
                 bg-transparent
-                font-medium font-bold text-white/80
+                font-medium font-bold text-[var(--text-primary)]/80
                 transition-all duration-300
                 hover:bg-white/90 hover:text-black hover:border-white
                 hover:scale-105 hover:shadow-lg hover:shadow-white/20
