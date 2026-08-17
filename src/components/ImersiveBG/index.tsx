@@ -3,7 +3,7 @@ import Image from "next/image";
 export function ImersiveBG() {
   return (  
     <div 
-        className=" absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-[45%] 
+        className=" mt-[20px] mr-[40px] absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-[45%] 
         aspect-square opacity-30">
 
         <div
