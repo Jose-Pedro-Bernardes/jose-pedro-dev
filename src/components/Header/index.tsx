@@ -23,23 +23,21 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`
-        fixed top-0 left-0 w-full z-50
-        flex justify-between
-        pt-4 px-20 pb-4
-        transition-[background-color,backdrop-filter] duration-300
-        ${
-          scrolled
-            ? "bg-[var(--bg-primary)]/80 backdrop-blur-md border-b border-[var(--accent)]/20"
-            : "bg-transparent border-b border-transparent"
-        }
-      `}
-    >
-      <div className="flex items-center gap-30">
+    <header className="fixed top-0 left-0 w-full z-50 flex justify-between pt-4 px-20 pb-4">
+      <div
+        aria-hidden="true"
+        className={`
+          absolute inset-0 -z-10
+          bg-[image:var(--header-bg)]
+          border-b border-[var(--accent)]/20
+          transition-opacity duration-500
+          ${scrolled ? "opacity-100" : "opacity-0"}
+        `}
+      />
+      <div className="w-full flex items-center gap-30">
         <Link href="/">
-          <p className="text-[var(--text-primary)] text-[1.5rem]">
-            JPD<span className="text-[var(--accent)]">.</span>
+          <p className="text-[var(--text-primary)] font-bold text-[1.5rem]">
+            JPD<span className="text-[var(--accent-soft)]">.</span>
           </p>
         </Link>
 
@@ -49,7 +47,9 @@ export function Header() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-[1rem] text-[var(--text-primary)]/70 hover:text-[var(--text-primary)] transition-colors"
+                  className="
+                    text-[0.9rem] text-[var(--text-primary)]/90 font-medium 
+                    hover:text-[var(--accent1)] transition-colors"
                 >
                   {label}
                 </Link>
