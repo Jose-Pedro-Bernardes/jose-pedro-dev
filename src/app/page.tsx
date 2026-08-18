@@ -6,89 +6,89 @@ export default function Home() {
     <div className="h-[100vh] max-h-[650px] bg-[image:var(--bg-primary)])]">
       <main
         className="relative h-[100%] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
-
+        
         <Header />
         
         <ImersiveBG />
 
         <section className="font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
 
-        <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
-          CODE you can see.
-          <span className="relative text-[var(--accent1)]">
-            .
-            <span
-              className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
-              style={{ transform: "rotate(90deg)" }}
-              aria-hidden="true"
-            >
-              )
+          <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
+            CODE you can see.
+            <span className="relative text-[var(--accent1)]">
+              .
+              <span
+                className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
+                style={{ transform: "rotate(90deg)" }}
+                aria-hidden="true"
+              >
+                )
+              </span>
             </span>
-          </span>
 
-          <br />
-          SOLUTIONS & experience<span className="text-[var(--accent1)]">.</span>
-        </h1>
+            <br />
+            SOLUTIONS & experience<span className="text-[var(--accent1)]">.</span>
+          </h1>
 
-<h2 className="font-dm-sans text-[1.6rem] font-bold">
-  <span className="text-[var(--text-primary)]">José Pedro Bernardes</span>
-  <span className="text-[var(--accent-soft)]"> · Full Stack Developer</span>
-</h2>
+          <h2 className="font-dm-sans text-[1.6rem] font-bold">
+            <span className="text-[var(--text-primary)]">José Pedro Bernardes</span>
+            <span className="text-[var(--accent-soft)]"> · Full Stack Developer</span>
+          </h2>
 
           <p className="max-w-[400px] text-[1.1rem] text-[var(--text-primary)]">
-            <span className="text-[var(--accent-soft)]">Coffee-powered</span>, mostly.{" "}
-            <span className="text-[var(--accent-soft)]">Bugs don&apos;t stand a chance</span>{" "}
-            after the second cup.
+              <span className="text-[var(--accent-soft)]">Coffee-powered</span>, mostly.{" "}
+              <span className="text-[var(--accent-soft)]">Bugs don&apos;t stand a chance</span>{" "}
+              after the second cup.
           </p>
 
           <div className="flex gap-7 mt-10">
-            <button
-              className="
-                group flex items-center gap-4
-                px-6 py-3
-                rounded-full
-                bg-yellow-400
-                font-medium font-bold text-black
-                transition-all duration-300
-                hover:bg-yellow-300 hover:scale-105
-                hover:shadow-lg hover:shadow-[#E3AD28]/30
-                cursor-pointer
-              "
-            >
-              <span className="font-medium">View Projects</span>
-
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="transition-transform duration-300 group-hover:translate-x-1"
+              <button
+                className="
+                  group flex items-center gap-4
+                  px-6 py-3
+                  rounded-full
+                  bg-yellow-400
+                  font-medium font-bold text-black
+                  transition-all duration-300
+                  hover:bg-yellow-300 hover:scale-105
+                  hover:shadow-lg hover:shadow-[#E3AD28]/30
+                  cursor-pointer
+                "
               >
-                <path
-                  d="M5 12H19M19 12L13 6M19 12L13 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+                <span className="font-medium">View Projects</span>
 
-            <button
-              className="
-                px-6 py-5
-                rounded-full border border-[1.5px] border-[var(--text-primary)]/80
-                bg-transparent
-                font-medium font-bold text-[var(--text-primary)]/80
-                transition-all duration-300
-                hover:bg-white/90 hover:text-black hover:border-white
-                hover:scale-105 hover:shadow-lg hover:shadow-white/20
-                cursor-pointer
-              "
-            >
-              Contact Me
-            </button>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <button
+                className="
+                  px-6 py-5
+                  rounded-full border border-[1.5px] border-[var(--text-primary)]/80
+                  bg-transparent
+                  font-medium font-bold text-[var(--text-primary)]/80
+                  transition-all duration-300
+                  hover:bg-white/90 hover:text-black hover:border-white
+                  hover:scale-105 hover:shadow-lg hover:shadow-white/20
+                  cursor-pointer
+                "
+              >
+                Contact Me
+              </button>
           </div>
         </section>
       </main>
