@@ -48,8 +48,13 @@ export function Header() {
                 <Link
                   href={href}
                   className="
-                    text-[0.9rem] text-[var(--text-primary)]/90 font-medium 
-                    hover:text-[var(--accent1)] transition-colors"
+                    inline-block
+                    text-[0.9rem] text-[var(--text-primary)]/90 font-medium
+                    transition-all duration-200 ease-out
+                    hover:text-[var(--accent1)]
+                    hover:scale-110
+                    origin-center
+                  "
                 >
                   {label}
                 </Link>
