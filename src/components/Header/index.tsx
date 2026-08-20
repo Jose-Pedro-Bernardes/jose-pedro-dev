@@ -23,7 +23,9 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex justify-between pt-4 px-20 pb-4">
+    <header className="fixed top-0 left-0 w-full z-50">
+      
+      {/* Background do Header continua ocupando a viewport inteira */}
       <div
         aria-hidden="true"
         className={`
@@ -34,56 +36,62 @@ export function Header() {
           ${scrolled ? "opacity-100" : "opacity-0"}
         `}
       />
-      <div className="w-full flex items-center gap-30">
-        <Link href="/">
-          <p className="text-[var(--text-primary)] font-bold text-[1.5rem]">
-            JPD<span className="text-[var(--accent-soft)]">.</span>
-          </p>
-        </Link>
 
-        <nav aria-label="Navegação principal">
-          <ul className="flex gap-15">
-            {NAV_LINKS.map(({ label, href }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="
-                    inline-block
-                    text-[0.9rem] text-[var(--text-primary)]/90 font-medium
-                    transition-all duration-200 ease-out
-                    hover:text-[var(--accent1)]
-                    hover:scale-110
-                    origin-center
-                  "
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      {/* Conteúdo limitado a 1940px */}
+      <div className="mx-auto w-full max-w-[1400px] flex items-center justify-between pt-4 px-20 pb-4">
+
+        <div className="flex items-center gap-30">
+          <Link href="/">
+            <p className="text-[var(--text-primary)] font-bold text-[1.5rem]">
+              JPD<span className="text-[var(--accent-soft)]">.</span>
+            </p>
+          </Link>
+
+          <nav aria-label="Navegação principal">
+            <ul className="flex gap-15">
+              {NAV_LINKS.map(({ label, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="
+                      inline-block
+                      text-[0.9rem] text-[var(--text-primary)]/90 font-medium
+                      transition-all duration-200 ease-out
+                      hover:text-[var(--accent1)]
+                      hover:scale-110
+                      origin-center
+                    "
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <button
+          type="button"
+          aria-label="Alternar tema"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="
+            flex items-center justify-center
+            w-[60px] p-2.5
+            rounded-xl border border-[var(--accent)]/25
+            text-[var(--text-primary)]
+            hover:bg-[var(--text-primary)]/10
+            transition-colors
+            cursor-pointer
+          "
+        >
+          {mounted && theme === "light" ? (
+            <Moon size={18} color="var(--accent)" />
+          ) : (
+            <Sun size={18} color="var(--accent)" />
+          )}
+        </button>
+
       </div>
-
-      <button
-        type="button"
-        aria-label="Alternar tema"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="
-          flex items-center justify-center
-          w-[60px] p-2.5
-          rounded-xl border border-[var(--accent)]/25
-          text-[var(--text-primary)]
-          hover:bg-[var(--text-primary)]/10
-          transition-colors
-          cursor-pointer
-        "
-      >
-        {mounted && theme === "light" ? (
-          <Moon size={18} color="var(--accent)" />
-        ) : (
-          <Sun size={18} color="var(--accent)" />
-        )}
-      </button>
     </header>
   );
 }
