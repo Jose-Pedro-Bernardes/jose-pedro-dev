@@ -3,45 +3,56 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="h-[100vh] max-h-[650px] bg-[image:var(--bg-primary)])]">
-      <main
-        className="relative h-[100%] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
-        
-        <Header />
-        
-        <ImersiveBG />
+    <div className="min-h-screen bg-[image:var(--bg-primary)]">
+      <main className="relative h-[650px] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
 
-        <section className="font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
+        <div className="relative mx-auto w-full max-w-[1400px]">
 
-          <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
-            CODE you can see.
-            <span className="relative text-[var(--accent1)]">
-              .
-              <span
-                className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
-                style={{ transform: "rotate(90deg)" }}
-                aria-hidden="true"
-              >
-                )
+          <Header />
+
+          <ImersiveBG />
+
+          <section className="relative z-10 font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
+
+            <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
+              CODE you can see.
+              <span className="relative text-[var(--accent1)]">
+                .
+                <span
+                  className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
+                  style={{ transform: "rotate(90deg)" }}
+                  aria-hidden="true"
+                >
+                  )
+                </span>
               </span>
-            </span>
 
-            <br />
-            SOLUTIONS & experience<span className="text-[var(--accent1)]">.</span>
-          </h1>
+              <br />
+              SOLUTIONS & experience
+              <span className="text-[var(--accent1)]">.</span>
+            </h1>
 
-          <h2 className="font-dm-sans text-[1.6rem] font-bold">
-            <span className="text-[var(--text-primary)]">José Pedro Bernardes</span>
-            <span className="text-[var(--accent-soft)]"> · Full Stack Developer</span>
-          </h2>
+            <h2 className="font-dm-sans text-[1.6rem] font-bold">
+              <span className="text-[var(--text-primary)]">
+                José Pedro Bernardes
+              </span>
+              <span className="text-[var(--accent-soft)]">
+                {" "}· Full Stack Developer
+              </span>
+            </h2>
 
-          <p className="max-w-[400px] text-[1.1rem] text-[var(--text-primary)]">
-              <span className="text-[var(--accent-soft)]">Coffee-powered</span>, mostly.{" "}
-              <span className="text-[var(--accent-soft)]">Bugs don&apos;t stand a chance</span>{" "}
+            <p className="max-w-[400px] text-[1.1rem] text-[var(--text-primary)]">
+              <span className="text-[var(--accent-soft)]">
+                Coffee-powered
+              </span>
+              , mostly.{" "}
+              <span className="text-[var(--accent-soft)]">
+                Bugs don&apos;t stand a chance
+              </span>{" "}
               after the second cup.
-          </p>
+            </p>
 
-          <div className="flex gap-7 mt-10">
+            <div className="flex gap-7 mt-10">
               <button
                 className="
                   group flex items-center gap-4
@@ -89,10 +100,14 @@ export default function Home() {
               >
                 Contact Me
               </button>
-          </div>
-        </section>
+            </div>
+
+          </section>
+        </div>
       </main>
-      <div className="h-[100px]"></div>
+        <div className=" w-full h-[100px] bg-black z-0 overflow-hidden">
+
+        </div>
     </div>
   );
 }
