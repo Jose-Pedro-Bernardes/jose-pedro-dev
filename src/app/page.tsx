@@ -4,22 +4,65 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[image:var(--bg-primary)]">
-      <main className="relative h-[650px] bg-[image:var(--bg-primary)] z-0 overflow-hidden">
-
+      <main
+        className="
+          relative
+          h-[650px]
+          bg-[image:var(--bg-primary)]
+          z-0
+          overflow-hidden
+        "
+      >
         <div className="relative mx-auto w-full max-w-[1400px]">
 
           <Header />
 
           <ImersiveBG />
 
-          <section className="relative z-10 font-dm-sans flex flex-col gap-[13px] mt-30 ml-20">
+          <section
+            className="
+              relative
+              z-10
+              font-dm-sans
+              flex flex-col
+              gap-[13px]
 
-            <h1 className="text-[3.5rem] font-semibold text-[var(--text-primary)]">
+              mt-30
+              px-5
+
+              items-center
+              text-center
+
+              lg:ml-20
+              lg:px-0
+              lg:items-start
+              lg:text-left
+            "
+          >
+
+            <h1
+              className="
+                text-[2.4rem]
+                font-semibold
+                text-[var(--text-primary)]
+
+                sm:text-[2.8rem]
+                lg:text-[3.5rem]
+              "
+            >
               CODE you can see.
               <span className="relative text-[var(--accent1)]">
                 .
                 <span
-                  className="absolute left-[3%] -bottom-3 text-3xl font-light select-none text-[var(--text-primary)]"
+                  className="
+                    absolute
+                    left-[3%]
+                    -bottom-3
+                    text-3xl
+                    font-light
+                    select-none
+                    text-[var(--text-primary)]
+                  "
                   style={{ transform: "rotate(90deg)" }}
                   aria-hidden="true"
                 >
@@ -28,45 +71,91 @@ export default function Home() {
               </span>
 
               <br />
+
               SOLUTIONS & experience
               <span className="text-[var(--accent1)]">.</span>
             </h1>
 
-            <h2 className="font-dm-sans text-[1.6rem] font-bold">
+            <h2
+              className="
+                font-dm-sans
+                text-[1.25rem]
+                font-bold
+
+                sm:text-[1.4rem]
+                lg:text-[1.6rem]
+              "
+            >
               <span className="text-[var(--text-primary)]">
                 José Pedro Bernardes
               </span>
+
               <span className="text-[var(--accent-soft)]">
                 {" "}· Full Stack Developer
               </span>
             </h2>
 
-            <p className="max-w-[400px] text-[1.1rem] text-[var(--text-primary)]">
+            <p
+              className="
+                max-w-[400px]
+                text-[1rem]
+                text-[var(--text-primary)]
+
+                sm:text-[1.05rem]
+                lg:text-[1.1rem]
+              "
+            >
               <span className="text-[var(--accent-soft)]">
                 Coffee-powered
               </span>
               , mostly.{" "}
+
               <span className="text-[var(--accent-soft)]">
                 Bugs don&apos;t stand a chance
               </span>{" "}
+
               after the second cup.
             </p>
 
-            <div className="flex gap-7 mt-10">
+            <div
+              className="
+                flex
+                flex-col
+                items-center
+                gap-4
+                mt-10
+
+                sm:flex-row
+                sm:gap-7
+
+                lg:items-start
+              "
+            >
               <button
                 className="
-                  group flex items-center gap-4
-                  px-6 py-3
+                  group
+                  flex
+                  items-center
+                  gap-4
+                  px-6
+                  py-3
                   rounded-full
                   bg-yellow-400
-                  font-medium font-bold text-black
-                  transition-all duration-300
-                  hover:bg-yellow-300 hover:scale-105
-                  hover:shadow-lg hover:shadow-[#E3AD28]/30
+                  font-medium
+                  font-bold
+                  text-black
+                  transition-all
+                  duration-300
+                  hover:bg-yellow-300
+                  hover:scale-105
+                  hover:shadow-lg
+                  hover:shadow-[#E3AD28]/30
                   cursor-pointer
                 "
               >
-                <span className="font-medium">View Projects</span>
+                <span className="font-medium">
+                  View Projects
+                </span>
 
                 <svg
                   width="20"
@@ -74,7 +163,11 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
                 >
                   <path
                     d="M5 12H19M19 12L13 6M19 12L13 18"
@@ -88,14 +181,27 @@ export default function Home() {
 
               <button
                 className="
-                  px-6 py-5
-                  rounded-full border border-[1.5px] border-[var(--text-primary)]/80
+                  px-6
+                  py-4
+                  rounded-full
+                  border
+                  border-[1.5px]
+                  border-[var(--text-primary)]/80
                   bg-transparent
-                  font-medium font-bold text-[var(--text-primary)]/80
-                  transition-all duration-300
-                  hover:bg-white/90 hover:text-black hover:border-white
-                  hover:scale-105 hover:shadow-lg hover:shadow-white/20
+                  font-medium
+                  font-bold
+                  text-[var(--text-primary)]/80
+                  transition-all
+                  duration-300
+                  hover:bg-white/90
+                  hover:text-black
+                  hover:border-white
+                  hover:scale-105
+                  hover:shadow-lg
+                  hover:shadow-white/20
                   cursor-pointer
+
+                  sm:py-5
                 "
               >
                 Contact Me
@@ -105,9 +211,8 @@ export default function Home() {
           </section>
         </div>
       </main>
-        <div className=" w-full h-[100px] bg-black z-0 overflow-hidden">
 
-        </div>
+      <div className="w-full h-[100px] bg-black z-0 overflow-hidden" />
     </div>
   );
 }
