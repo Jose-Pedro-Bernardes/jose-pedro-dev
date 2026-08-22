@@ -1,28 +1,62 @@
 import Image from "next/image";
 
 export function ImersiveBG() {
-  return (  
-    <div 
-        className=" mt-[20px] mr-[40px] absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-[40%] 
-        aspect-square opacity-30">
+  return (
+    <aside
+      className="
+        absolute
+        top-1/2
+        left-1/2
+        -translate-x-1/2
+        -translate-y-1/2
 
-        <div
-            className="relative max-w-full max-h-full w-full h-full rounded-full overflow-hidden animate-spin-slow"
-            style={{
-                maskImage: "radial-gradient(circle, black 35%, transparent 70%)",
-                WebkitMaskImage: "radial-gradient(circle, black 35%, transparent 70%)",
-            }}
-        >
-    
-            <Image
-                src="/assets/bgImersive.png"
-                width={900}
-                height={900}
-                alt="side object"
-                className="absolute w-full h-full object-cover pointer-events-none select-none"
-                loading="eager"
-            />
-        </div>
-    </div>
+        w-[70%]
+        aspect-square
+
+        opacity-20
+        -z-10
+
+        lg:left-auto
+        lg:right-0
+        lg:translate-x-0
+        lg:w-[40%]
+        lg:mr-[40px]
+      "
+    >
+      <div
+        className="
+          relative
+          w-full
+          h-full
+          max-w-full
+          max-h-full
+          rounded-full
+          overflow-hidden
+          animate-spin-slow
+        "
+        style={{
+          maskImage:
+            "radial-gradient(circle, black 35%, transparent 70%)",
+          WebkitMaskImage:
+            "radial-gradient(circle, black 35%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/assets/bgImersive.png"
+          width={900}
+          height={900}
+          alt=""
+          className="
+            absolute
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+            select-none
+          "
+          loading="eager"
+        />
+      </div>
+    </aside>
   );
 }
