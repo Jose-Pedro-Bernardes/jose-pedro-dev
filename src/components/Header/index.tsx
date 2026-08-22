@@ -5,6 +5,7 @@ import { NAV_LINKS } from "@/lib/nav-links";
 import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +25,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      
+
       {/* Background do Header continua ocupando a viewport inteira */}
       <div
         aria-hidden="true"
@@ -37,17 +38,48 @@ export function Header() {
         `}
       />
 
-      {/* Conteúdo limitado a 1940px */}
-      <div className="mx-auto w-full max-w-[1400px] flex items-center justify-between pt-4 px-20 pb-4">
+      {/* Conteúdo limitado a 1400px */}
+      <div
+        className="
+          mx-auto
+          w-full
+          max-w-[1400px]
 
-        <div className="flex items-center gap-30">
+          flex
+          items-center
+          justify-between
+
+          pt-3
+          px-5
+          pb-3
+
+          lg:pt-4
+          lg:px-20
+          lg:pb-4
+        "
+      >
+
+        {/* Logo + Navegação */}
+        <div className="flex items-center gap-6 lg:gap-30">
+
           <Link href="/">
-            <p className="text-[var(--text-primary)] font-bold text-[1.5rem]">
+            <p
+              className="
+                text-[var(--text-primary)]
+                font-bold
+                text-[1.3rem]
+
+                lg:text-[1.5rem]
+              "
+            >
               JPD<span className="text-[var(--accent-soft)]">.</span>
             </p>
           </Link>
 
-          <nav aria-label="Navegação principal">
+          <nav
+            className="hidden lg:flex"
+            aria-label="Navegação principal"
+          >
             <ul className="flex gap-15">
               {NAV_LINKS.map(({ label, href }) => (
                 <li key={href}>
@@ -55,8 +87,12 @@ export function Header() {
                     href={href}
                     className="
                       inline-block
-                      text-[0.9rem] text-[var(--text-primary)]/90 font-medium
-                      transition-all duration-200 ease-out
+                      text-[0.9rem]
+                      text-[var(--text-primary)]/90
+                      font-medium
+                      transition-all
+                      duration-200
+                      ease-out
                       hover:text-[var(--accent1)]
                       hover:scale-110
                       origin-center
@@ -70,27 +106,70 @@ export function Header() {
           </nav>
         </div>
 
-        <button
-          type="button"
-          aria-label="Alternar tema"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="
-            flex items-center justify-center
-            w-[60px] p-2.5
-            rounded-xl border border-[var(--accent)]/25
-            text-[var(--text-primary)]
-            hover:bg-[var(--text-primary)]/10
-            transition-colors
-            cursor-pointer
-          "
-        >
-          {mounted && theme === "light" ? (
-            <Moon size={18} color="var(--accent)" />
-          ) : (
-            <Sun size={18} color="var(--accent)" />
-          )}
-        </button>
+        {/* Ações */}
+        <div className="flex items-center gap-2 lg:gap-3">
 
+          {/* Hamburger */}
+          <button
+            type="button"
+            aria-label="Abrir menu"
+            className="
+              flex
+              items-center
+              justify-center
+
+              lg:hidden
+
+              cursor-pointer
+              opacity-90
+            "
+          >
+            <Image
+              src="/assets/hamburger.png"
+              alt=""
+              width={32}
+              height={32}
+            />
+          </button>
+
+          {/* Theme */}
+          <button
+            type="button"
+            aria-label="Alternar tema"
+            onClick={() =>
+              setTheme(theme === "dark" ? "light" : "dark")
+            }
+            className="
+              flex
+              items-center
+              justify-center
+
+              w-[48px]
+              p-2
+
+              rounded-xl
+              border
+              border-[var(--accent)]/25
+
+              text-[var(--text-primary)]
+
+              hover:bg-[var(--text-primary)]/10
+
+              transition-colors
+              cursor-pointer
+
+              lg:w-[60px]
+              lg:p-2.5
+            "
+          >
+            {mounted && theme === "light" ? (
+              <Moon size={18} color="var(--accent)" />
+            ) : (
+              <Sun size={18} color="var(--accent)" />
+            )}
+          </button>
+
+        </div>
       </div>
     </header>
   );
