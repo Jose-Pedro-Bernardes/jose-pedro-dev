@@ -1,3 +1,4 @@
+import { StackCarousel } from "@/components/StackCarousel";
 import { Header } from "@/components/Header";
 import { ImersiveBG } from "@/components/ImersiveBG";
 
@@ -221,9 +222,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[200px] bg-black overflow-hidden"> 
-        <ul></ul>
-      </section>
+      <StackCarousel />
     </main>
   );
 }
