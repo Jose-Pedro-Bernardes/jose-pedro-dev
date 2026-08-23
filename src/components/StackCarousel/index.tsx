@@ -36,12 +36,14 @@ export function StackCarousel() {
             <span
               className="
                 font-dm-sans
-                text-[4rem]
+                text-[3rem]
                 font-semibold
                 tracking-wider
                 text-white
                 opacity-90
                 whitespace-nowrap
+                
+                sm:text-[4rem]
               "
             >
               {technology}
