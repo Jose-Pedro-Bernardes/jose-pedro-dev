@@ -3,8 +3,8 @@ import { ImersiveBG } from "@/components/ImersiveBG";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[image:var(--bg-primary)]">
-      <main
+    <main className="min-h-screen bg-[image:var(--bg-primary)]">
+      <section
         className="
           relative
           h-[650px]
@@ -19,7 +19,7 @@ export default function Home() {
 
           <ImersiveBG />
 
-          <section
+          <div
             className="
               relative
               z-10
@@ -127,8 +127,6 @@ export default function Home() {
 
                 sm:flex-row
                 sm:gap-7
-
-                lg:items-start
               "
             >
               <button
@@ -136,26 +134,31 @@ export default function Home() {
                   group
                   flex
                   items-center
+                  justify-center
                   gap-4
-                  px-6
-                  py-3
+
+                  w-[190px]
+                  h-[60px]
+
                   rounded-full
                   bg-yellow-400
-                  font-medium
+                  border-yellow-400
+
                   font-bold
                   text-black
+
                   transition-all
                   duration-300
+
                   hover:bg-yellow-300
                   hover:scale-105
                   hover:shadow-lg
                   hover:shadow-[#E3AD28]/30
+
                   cursor-pointer
                 "
               >
-                <span className="font-medium">
-                  View Projects
-                </span>
+                <span>View Projects</span>
 
                 <svg
                   width="20"
@@ -181,38 +184,46 @@ export default function Home() {
 
               <button
                 className="
-                  px-6
-                  py-4
+                  flex
+                  items-center
+                  justify-center
+
+                  w-[190px]
+                  h-[60px]
+
                   rounded-full
                   border
                   border-[1.5px]
                   border-[var(--text-primary)]/80
+
                   bg-transparent
-                  font-medium
+
                   font-bold
                   text-[var(--text-primary)]/80
+
                   transition-all
                   duration-300
+
                   hover:bg-white/90
                   hover:text-black
                   hover:border-white
                   hover:scale-105
                   hover:shadow-lg
                   hover:shadow-white/20
-                  cursor-pointer
 
-                  sm:py-5
+                  cursor-pointer
                 "
               >
                 Contact Me
               </button>
             </div>
 
-          </section>
+          </div>
         </div>
-      </main>
-
-      <div className="w-full h-[100px] bg-black z-0 overflow-hidden" />
-    </div>
+      </section>
+      <section className="w-full h-[200px] bg-black overflow-hidden"> 
+        <ul></ul>
+      </section>
+    </main>
   );
 }
