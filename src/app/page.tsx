@@ -8,10 +8,10 @@ export default function Home() {
       <section
         className="
           relative
-          h-[650px]
           bg-[image:var(--bg-primary)]
           z-0
           overflow-hidden
+          min-h-[650px]
         "
       >
         <div className="relative mx-auto w-full max-w-[1400px]">
