@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
+
 @theme {
+  --font-dm-sans: var(--font-dm-sans);
+  --font-montserrat: var(--font-montserrat);
+  --font-display: var(--font-black-ops-one);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+
   --animate-spin-slow: spin-slow 60s linear infinite;
 
   @keyframes spin-slow {
@@ -24,7 +31,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -35,8 +42,8 @@
 
 :root {
   /* light (padrão) */
-  --bg-primary: linear-gradient(to left, #68680147, #ddddd7);
-  --header-bg: linear-gradient(to left, #ededc6, #ededed);
+--bg-primary: linear-gradient(to right, #c5c59a, #ddddd7);
+  --header-bg: linear-gradient(to right, #ededc6, #ededed);
   --text-primary: #0a0a0a;
   --text-secondary: rgba(10, 10, 10, 0.75);
   --accent1: #e8a617;      /* ffea00 escurecido p/ contraste no branco */
@@ -53,5 +60,5 @@
   --accent1: #ffea00;
   --accent: #ffea00;
   --accent-button: #1e1505;
-  --accent-soft: #d6b56a;
+  --accent-soft: #e8d652;
 }
