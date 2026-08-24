@@ -13,6 +13,8 @@ export function StackCarousel() {
    <section
       aria-label="Tecnologias"
       className="
+        relative
+        z-10
         w-full
         h-[120px]
         border-[var(--accent1)]/20
@@ -42,7 +44,7 @@ export function StackCarousel() {
                 text-[3rem]
                 font-semibold
                 tracking-wider
-                text-white
+                text-[var(--text-primary)]
                 opacity-90
                 whitespace-nowrap
 
