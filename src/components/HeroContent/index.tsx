@@ -1,3 +1,4 @@
+import { Handshake } from "lucide-react";
 
 export function HeroContent() {
   return (
@@ -5,10 +6,9 @@ export function HeroContent() {
       className="
         relative
         z-10
-        font-dm-sans
         flex flex-col
         gap-[13px]
-
+        font-geist-sans
         mt-30
         px-5
 
@@ -28,16 +28,16 @@ export function HeroContent() {
           text-[var(--text-primary)]
 
           sm:text-[2.8rem]
-          lg:text-[3.5rem]
+          lg:text-[3.2rem]
         "
       >
-        CODE you can see.
+        {"{"}<span className="text-[var(--accent1)]">CODE</span>{"}"} you can see.
         <span className="relative text-[var(--accent1)]">
           .
           <span
             className="
               absolute
-              left-[3%]
+              left-[-20%]
               -bottom-3
               text-3xl
               font-light
@@ -53,7 +53,7 @@ export function HeroContent() {
 
         <br />
 
-        SOLUTIONS & experience
+        SOLUTIONS & EXPERIENCES
         <span className="text-[var(--accent1)]">.</span>
       </h1>
 
@@ -83,7 +83,7 @@ export function HeroContent() {
           text-[var(--text-primary)]
 
           sm:text-[1.05rem]
-          lg:text-[1.1rem]
+          lg:text-[1.2rem]
         "
       >
         <span className="text-[var(--accent-soft)]">
@@ -121,7 +121,7 @@ export function HeroContent() {
             w-[190px]
             h-[60px]
 
-            rounded-full
+            rounded-[15px]
             bg-yellow-400
             border-yellow-400
 
@@ -171,8 +171,9 @@ export function HeroContent() {
 
             w-[190px]
             h-[60px]
+            gap-3
 
-            rounded-full
+            rounded-[15px]
             border
             border-[1.5px]
             border-[var(--text-primary)]/80
@@ -196,6 +197,11 @@ export function HeroContent() {
           "
         >
           Contact Me
+
+          <Handshake
+            size={18}
+            className="transition-colors duration-300"
+          />
         </button>
       </div>
     </div>
