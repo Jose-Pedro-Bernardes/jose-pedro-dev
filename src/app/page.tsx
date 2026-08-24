@@ -6,6 +6,9 @@ import { HeroContent } from "@/components/HeroContent";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[image:var(--bg-primary)]">
+
+      <Header />
+
       <section
         className="
           relative
@@ -17,13 +20,16 @@ export default function Home() {
       >
         <div className="relative mx-auto w-full max-w-[1400px]">
 
-          <Header />
           <ImersiveBG />
           <HeroContent />
-          
+
         </div>
       </section>
+
       <StackCarousel />
+
+      <div className="h-[5000px]" />
+
     </main>
   );
 }
