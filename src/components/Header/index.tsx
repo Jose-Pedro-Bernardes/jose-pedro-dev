@@ -66,6 +66,7 @@ export function Header() {
             <p
               className="
                 text-[var(--text-primary)]
+                font-display
                 font-bold
                 text-[1.3rem]
 
@@ -90,6 +91,7 @@ export function Header() {
                       text-[0.9rem]
                       text-[var(--text-primary)]/90
                       font-medium
+                      font-dm-sans
                       transition-all
                       duration-200
                       ease-out
