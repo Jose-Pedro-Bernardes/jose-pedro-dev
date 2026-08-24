@@ -15,7 +15,10 @@ export function StackCarousel() {
       className="
         w-full
         h-[120px]
-        bg-black
+        border-[var(--accent1)]/20
+        border-t-[1px]
+        border-b-[1px]
+        opacity-40
         overflow-hidden
         flex
         items-center
@@ -42,7 +45,7 @@ export function StackCarousel() {
                 text-white
                 opacity-90
                 whitespace-nowrap
-                
+
                 sm:text-[4rem]
               "
             >
