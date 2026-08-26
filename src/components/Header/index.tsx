@@ -33,7 +33,11 @@ export function Header() {
           absolute inset-0 -z-10
           bg-[image:var(--header-bg)]
           border-b border-[var(--accent)]/20
-          transition-opacity duration-500
+
+          transition-none
+          lg:transition-opacity
+          lg:duration-500
+
           ${scrolled ? "opacity-100" : "opacity-0"}
         `}
       />
