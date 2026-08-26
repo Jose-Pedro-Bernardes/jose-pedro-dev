@@ -9,12 +9,12 @@ export function HeroContent() {
         flex flex-col
         gap-[13px]
         font-geist-sans
-        mt-20
+        mt-22
         px-5
 
         items-center
         text-center
-
+        
         sm:mt-30
         lg:ml-20
         lg:px-0
@@ -101,6 +101,9 @@ export function HeroContent() {
 
       <div
         className="
+          w-full
+          max-w-[400px]
+          sm:w-[400px]
           flex
           flex-col
           items-center
@@ -119,7 +122,10 @@ export function HeroContent() {
             justify-center
             gap-4
 
-            w-[190px]
+            w-full
+
+            sm:w-[190px]
+
             h-[60px]
 
             rounded-[15px]
@@ -171,8 +177,9 @@ export function HeroContent() {
           flex
           items-center
           justify-center
-
-          w-[190px]
+          
+          w-full
+          sm:w-[190px]
           h-[60px]
           gap-3
 

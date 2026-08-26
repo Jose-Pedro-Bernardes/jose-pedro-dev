@@ -16,6 +16,8 @@ export default function Home() {
           z-0
           overflow-hidden
           min-h-[650px]
+          sm:min-h-[700px]
+          lg:min-h-[600px]
         "
       >
         <div className="relative mx-auto w-full max-w-[1400px]">
