@@ -9,12 +9,13 @@ export function HeroContent() {
         flex flex-col
         gap-[13px]
         font-geist-sans
-        mt-30
+        mt-20
         px-5
 
         items-center
         text-center
 
+        sm:mt-30
         lg:ml-20
         lg:px-0
         lg:items-start
@@ -23,7 +24,7 @@ export function HeroContent() {
     >
       <h1
         className="
-          text-[2.4rem]
+          text-[2.2rem]
           font-semibold
           text-[var(--text-primary)]
 
@@ -60,7 +61,7 @@ export function HeroContent() {
       <h2
         className="
           font-dm-sans
-          text-[1.25rem]
+          text-[1.05rem]
           font-bold
 
           sm:text-[1.4rem]
@@ -79,7 +80,7 @@ export function HeroContent() {
       <p
         className="
           max-w-[400px]
-          text-[1rem]
+          text-[0.9rem]
           text-[var(--text-primary)]
 
           sm:text-[1.05rem]
@@ -104,8 +105,8 @@ export function HeroContent() {
           flex-col
           items-center
           gap-4
-          mt-10
-
+          mt-3
+          sm:mt-10
           sm:flex-row
           sm:gap-7
         "
