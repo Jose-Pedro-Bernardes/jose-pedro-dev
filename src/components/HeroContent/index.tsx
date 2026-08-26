@@ -1,4 +1,4 @@
-import { Handshake } from "lucide-react";
+import { Handshake, MessageCircleMore } from "lucide-react";
 
 export function HeroContent() {
   return (
@@ -151,6 +151,7 @@ export function HeroContent() {
               transition-transform
               duration-300
               group-hover:translate-x-1
+              group-hover:scale-160
             "
           >
             <path
@@ -165,42 +166,48 @@ export function HeroContent() {
 
         <button
           className="
-            flex
-            items-center
-            justify-center
+          group
+          flex
+          items-center
+          justify-center
 
-            w-[190px]
-            h-[60px]
-            gap-3
+          w-[190px]
+          h-[60px]
+          gap-3
 
-            rounded-[15px]
-            border
-            border-[1.5px]
-            border-[var(--text-primary)]/80
+          rounded-[15px]
+          border
+          border-[1.5px]
+          border-[var(--text-primary)]/80
 
-            bg-transparent
+          bg-transparent
 
-            font-bold
-            text-[var(--text-primary)]/80
+          font-bold
+          text-[var(--text-primary)]/80
 
-            transition-all
-            duration-300
+          transition-all
+          duration-300
 
-            hover:bg-white/90
-            hover:text-black
-            hover:border-white
-            hover:scale-105
-            hover:shadow-lg
-            hover:shadow-white/20
+          hover:bg-white/90
+          hover:text-black
+          hover:border-white
+          hover:scale-105
+          hover:shadow-lg
+          hover:shadow-white/20
 
-            cursor-pointer
+          cursor-pointer
           "
         >
           Contact Me
 
-          <Handshake
+          <MessageCircleMore
             size={18}
-            className="transition-colors duration-300"
+            className="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              group-hover:scale-160
+            "
           />
         </button>
       </div>
