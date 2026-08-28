@@ -10,6 +10,7 @@ import Image from "next/image";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
@@ -81,6 +82,7 @@ export function Header() {
             </p>
           </Link>
 
+          {/* Navegação Desktop */}
           <nav
             className="hidden lg:flex"
             aria-label="Navegação principal"
@@ -118,7 +120,9 @@ export function Header() {
           {/* Hamburger */}
           <button
             type="button"
-            aria-label="Abrir menu"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
             className="
               flex
               items-center
@@ -177,6 +181,44 @@ export function Header() {
 
         </div>
       </div>
+
+      {/* Menu Mobile */}
+      {menuOpen && (
+        <nav
+          className="
+            lg:hidden
+            border-t
+            border-[var(--accent)]/20
+            bg-[image:var(--header-bg)]
+            px-5
+            py-5
+          "
+          aria-label="Navegação mobile"
+        >
+          <ul className="flex flex-col gap-5">
+            {NAV_LINKS.map(({ label, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="
+                    block
+                    font-dm-sans
+                    text-[1rem]
+                    font-medium
+                    text-[var(--text-primary)]/90
+                    transition-colors
+                    duration-200
+                    hover:text-[var(--accent1)]
+                  "
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
