@@ -11,10 +11,14 @@ export function ImersiveBG() {
         -translate-y-1/2
 
         w-[70%]
+        min-[300px]:max-[720px]:w-[100%]
         aspect-square
 
         opacity-20
         -z-10
+
+        max-[450px]:top-[30%]
+        max-[450px]:translate-y--1/2
 
         lg:left-auto
         lg:right-0
