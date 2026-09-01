@@ -41,15 +41,17 @@
 }
 
 :root {
-  /* light (padrão) */
---bg-primary: linear-gradient(to right, #c5c59a, #ddddd7);
-  --header-bg: linear-gradient(to right, #ededc6, #ededed);
-  --text-primary: #0a0a0a;
-  --text-secondary: rgba(10, 10, 10, 0.75);
-  --accent1: #e8a617;      /* ffea00 escurecido p/ contraste no branco */
-  --accent: #1e1505;
+  --bg-primary: linear-gradient(to right, #e6e6d8, #f4f4f1);
+  --header-bg: linear-gradient(to right, #f0f0e5, #fafaf8);
+
+  --text-primary: #111111;
+  --text-secondary: rgba(17, 17, 17, 0.75);
+
+  --accent1: #d9a400;
+  --accent: #4a3900;
   --accent-button: #684200;
-  --accent-soft: #a06000; /* D6B56A escurecido */
+  --accent-soft: #927000;
+  --bg-Opacity: 30%;
 }
 
 .dark {
@@ -61,4 +63,5 @@
   --accent: #ffea00;
   --accent-button: #1e1505;
   --accent-soft: #e8d652;
+  --bg-Opacity: 20%;
 }
