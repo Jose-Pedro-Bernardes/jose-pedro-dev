@@ -14,7 +14,7 @@ export function ImersiveBG() {
         min-[300px]:max-[720px]:w-[100%]
         aspect-square
 
-        opacity-20
+        opacity-[var(--bg-Opacity)]
         -z-10
 
         max-[450px]:top-[30%]
