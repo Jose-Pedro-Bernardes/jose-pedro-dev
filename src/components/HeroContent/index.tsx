@@ -7,9 +7,9 @@ export function HeroContent() {
         relative
         z-10
         flex flex-col
-        gap-[13px]
+        gap-[20px]
         font-geist-sans
-        mt-22
+        mt-28
         px-5
 
         items-center
