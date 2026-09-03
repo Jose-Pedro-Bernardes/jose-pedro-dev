@@ -1,4 +1,4 @@
-import { Handshake, MessageCircleMore } from "lucide-react";
+import { MessageCircleMore } from "lucide-react";
 
 export function HeroContent() {
   return (
