@@ -41,20 +41,6 @@
 }
 
 :root {
-  --bg-primary: linear-gradient(to right, #e6e6d8, #f4f4f1);
-  --header-bg: linear-gradient(to right, #f0f0e5, #fafaf8);
-
-  --text-primary: #111111;
-  --text-secondary: rgba(17, 17, 17, 0.75);
-
-  --accent1: #d9a400;
-  --accent: #4a3900;
-  --accent-button: #684200;
-  --accent-soft: #927000;
-  --bg-Opacity: 30%;
-}
-
-.dark {
   --bg-primary: linear-gradient(to right, #171600, #000000);
   --header-bg: linear-gradient(to right, #171600, #000000);
   --text-primary: rgba(255, 255, 255, 0.95);
@@ -65,3 +51,4 @@
   --accent-soft: #e8d652;
   --bg-Opacity: 20%;
 }
+
