@@ -3,17 +3,12 @@
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/nav-links";
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
+  const [language, setLanguage] = useState<"EN" | "PT">("EN");
 
   useEffect(() => {
     function handleScroll() {
@@ -142,20 +137,19 @@ export function Header() {
             />
           </button>
 
-          {/* Theme */}
           <button
             type="button"
-            aria-label="Alternar tema"
-            onClick={() =>
-              setTheme(theme === "dark" ? "light" : "dark")
-            }
+            aria-label="Trocar idioma"
+            onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
             className="
               flex
               items-center
               justify-center
+              gap-2
 
-              w-[48px]
-              p-2
+              min-w-[48px]
+              h-[40px]
+              px-2
 
               rounded-xl
               border
@@ -163,20 +157,27 @@ export function Header() {
 
               text-[var(--text-primary)]
 
+              font-dm-sans
+              font-bold
+              text-sm
+
               hover:bg-[var(--text-primary)]/10
 
               transition-colors
               cursor-pointer
 
-              lg:w-[60px]
-              lg:p-2.5
+              lg:min-w-[60px]
+              lg:px-3
             "
           >
-            {mounted && theme === "light" ? (
-              <Moon size={18} color="var(--accent)" />
-            ) : (
-              <Sun size={18} color="var(--accent)" />
-            )}
+            <span>{language}</span>
+
+            <Image
+              src={language === "EN" ? "/assets/flags/us.png" : "/assets/flags/br.png"}
+              alt=""
+              width={20}
+              height={14}
+            />
           </button>
 
         </div>

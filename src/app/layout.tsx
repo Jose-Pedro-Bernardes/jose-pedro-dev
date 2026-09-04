@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/themeProvider";
 import { dmSans, montserrat, blackOpsOne, geistMono, geistSans } from "@/lib/fonts";
 
   
@@ -31,9 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
-        <ThemeProvider>
           {children}
-        </ThemeProvider>
       </body>
     </html>
   );
