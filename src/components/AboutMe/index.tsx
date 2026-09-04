@@ -1,6 +1,6 @@
 export function AboutMe() {
     return (
-        <section className="h-[700px] w-full flex">
+        <section className="h-[700px] w-full flex opacity-0">
             <h2>But who is behind the code?</h2>
         </section>
     )
