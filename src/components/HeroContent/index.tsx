@@ -29,7 +29,7 @@ export function HeroContent() {
           text-[var(--text-primary)]
 
           sm:text-[2.8rem]
-          lg:text-[3.2rem]
+          
         "
       >
         {"{"}<span className="text-[var(--accent1)]">CODE</span>{"}"} you can see.
