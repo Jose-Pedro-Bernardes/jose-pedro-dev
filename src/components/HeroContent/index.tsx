@@ -5,7 +5,7 @@ export function HeroContent() {
     <div
       className="
         relative
-        z-10
+        z-0
         flex flex-col
         gap-[20px]
         font-geist-sans

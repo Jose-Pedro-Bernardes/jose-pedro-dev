@@ -4,6 +4,7 @@ export function ImersiveBG() {
   return (
     <aside
       className="
+        group
         absolute
         top-1/2
         left-1/2
@@ -14,7 +15,7 @@ export function ImersiveBG() {
         min-[300px]:max-[720px]:w-[100%]
         aspect-square
 
-        -z-10
+        z-10
 
         max-[450px]:top-[30%]
         max-[450px]:translate-y--1/2
@@ -32,8 +33,10 @@ export function ImersiveBG() {
           inset-0
           rounded-full
           overflow-hidden
-          animate-spin-slow
           opacity-50
+          animate-spin-slow
+          [animation-play-state:paused]
+          group-hover:[animation-play-state:running]
         "
         style={{
           maskImage:
@@ -97,4 +100,3 @@ export function ImersiveBG() {
     </aside>
   );
 }
-
