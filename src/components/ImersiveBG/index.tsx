@@ -21,10 +21,10 @@ export function ImersiveBG() {
         max-[450px]:translate-y--1/2
 
         lg:left-auto
-        lg:right-0
+        lg:right-20
         lg:translate-x-0
-        lg:w-[40%]
-        lg:mr-[40px]
+        lg:w-[35%]
+        
       "
     >
       <div
@@ -33,7 +33,7 @@ export function ImersiveBG() {
           inset-0
           rounded-full
           overflow-hidden
-          opacity-50
+          opacity-40
           animate-spin-slow
           [animation-play-state:paused]
           group-hover:[animation-play-state:running]
@@ -80,16 +80,16 @@ export function ImersiveBG() {
         }}
       >
         <Image
-          src="/assets/eula.png"
+          src="/assets/eula.jpg"
           width={700}
           height={700}
           alt="José Pedro Bernardes"
           className="
             opacity-90
-            border-[var(--accent1)]/20
+            border-white/12
             border-[4px]
-            w-[65%]
-            h-[65%]
+            w-[70%]
+            h-[70%]
             rounded-full
             object-cover
             pointer-events-none
