@@ -24,7 +24,6 @@ export function ImersiveBG() {
         lg:right-20
         lg:translate-x-0
         lg:w-[35%]
-        
       "
     >
       <div
@@ -33,31 +32,22 @@ export function ImersiveBG() {
           inset-0
           rounded-full
           overflow-hidden
-          opacity-40
+          opacity-50
           animate-spin-slow
           [animation-play-state:paused]
           group-hover:[animation-play-state:running]
         "
         style={{
-          maskImage:
-            "radial-gradient(circle, black 35%, transparent 70%)",
-          WebkitMaskImage:
-            "radial-gradient(circle, black 35%, transparent 70%)",
+          maskImage: "radial-gradient(circle, black 35%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(circle, black 35%, transparent 70%)",
         }}
       >
         <Image
-          src="/assets/bgImersive.png"
+          src="/assets/numberbg.png"
           width={900}
           height={900}
           alt=""
-          className="
-            absolute
-            w-full
-            h-full
-            object-cover
-            pointer-events-none
-            select-none
-          "
+          className="absolute w-full h-full object-cover pointer-events-none select-none"
           loading="eager"
         />
       </div>
@@ -73,10 +63,8 @@ export function ImersiveBG() {
           overflow-hidden
         "
         style={{
-          maskImage:
-            "radial-gradient(circle, black 50%, transparent 100%)",
-          WebkitMaskImage:
-            "radial-gradient(circle, black 50%, transparent 100%)",
+          maskImage: "radial-gradient(circle, black 50%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(circle, black 50%, transparent 100%)",
         }}
       >
         <Image
@@ -85,8 +73,7 @@ export function ImersiveBG() {
           height={700}
           alt="José Pedro Bernardes"
           className="
-            opacity-90
-            border-white/12
+            border-[var(--accent)]/10
             border-[4px]
             w-[70%]
             h-[70%]
@@ -97,6 +84,11 @@ export function ImersiveBG() {
           "
         />
       </div>
+
+      <span className="absolute bottom-[18%] right-[30%] flex h-6 w-6 z-20">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+        <span className="relative inline-flex h-6 w-6 rounded-full bg-green-500 border-2 border-black" />
+      </span>
     </aside>
   );
 }
