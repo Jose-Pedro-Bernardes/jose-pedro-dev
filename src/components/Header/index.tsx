@@ -34,7 +34,7 @@ export function Header() {
           lg:transition-opacity
           lg:duration-500
 
-          ${scrolled ? "opacity-100" : "opacity-0"}
+          ${scrolled || menuOpen ? "opacity-100" : "opacity-0"}
         `}
       />
 
@@ -59,7 +59,6 @@ export function Header() {
         "
       >
 
-        {/* Logo + Navegação */}
         <div className="flex items-center gap-6 lg:gap-30">
 
           <Link href="/">
@@ -68,9 +67,9 @@ export function Header() {
                 text-[var(--text-primary)]
                 font-display
                 font-bold
-                text-[1.3rem]
+                text-xl
 
-                lg:text-[1.5rem]
+                lg:text-2xl
               "
             >
               JPD<span className="text-[var(--accent-soft)]">.</span>
@@ -89,10 +88,10 @@ export function Header() {
                     href={href}
                     className="
                       inline-block
-                      text-[0.9rem]
+                      text-sm
                       text-[var(--text-primary)]/90
                       font-medium
-                      font-dm-sans
+                      font-geist-sans
                       transition-all
                       duration-200
                       ease-out
@@ -110,7 +109,7 @@ export function Header() {
         </div>
 
         {/* Ações */}
-        <div className="flex items-center gap-2 lg:gap-3">
+        <div className="flex items-center gap-3 lg:gap-3">
 
           {/* Hamburger */}
           <button
@@ -142,7 +141,8 @@ export function Header() {
             aria-label="Trocar idioma"
             onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
             className="
-              flex
+              hidden
+              lg:flex
               items-center
               justify-center
               gap-2
@@ -157,7 +157,7 @@ export function Header() {
 
               text-[var(--text-primary)]
 
-              font-dm-sans
+              font-geist-sans
               font-bold
               text-sm
 
@@ -178,6 +178,44 @@ export function Header() {
               width={20}
               height={14}
             />
+          </button>
+
+          <button
+            type="button"
+            className="
+              hidden
+              lg:flex
+              items-center
+              justify-center
+              gap-2
+
+              min-w-[48px]
+              h-[40px]
+              px-2
+
+              bg-yellow-400
+              rounded-xl
+
+              text-[var(--text-secondary)]
+
+              font-geist-sans
+              font-bold
+              text-sm
+              
+              transition-all
+              duration-300
+              hover:bg-yellow-300
+              hover:scale-105
+              hover:shadow-lg
+              hover:shadow-[#E3AD28]/30
+
+              cursor-pointer
+
+              lg:min-w-[60px]
+              lg:px-3
+            "
+          >
+            Let's chat
           </button>
 
         </div>
@@ -205,7 +243,7 @@ export function Header() {
                   className="
                     block
                     font-dm-sans
-                    text-[1rem]
+                    text-base
                     font-medium
                     text-[var(--text-primary)]/90
                     transition-colors
@@ -218,6 +256,86 @@ export function Header() {
               </li>
             ))}
           </ul>
+
+          {/* Ações no mobile */}
+          <div className="flex items-center gap-3 mt-6 pt-5 border-t border-[var(--accent)]/20">
+
+            <button
+              type="button"
+              aria-label="Trocar idioma"
+              onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
+              className="
+                flex
+                items-center
+                justify-center
+                gap-2
+
+                min-w-[48px]
+                h-[40px]
+                px-3
+
+                rounded-xl
+                border
+                border-[var(--accent)]/25
+
+                text-[var(--text-primary)]
+
+                font-geist-sans
+                font-bold
+                text-sm
+
+                hover:bg-[var(--text-primary)]/10
+
+                transition-colors
+                cursor-pointer
+              "
+            >
+              <span>{language}</span>
+
+              <Image
+                src={language === "EN" ? "/assets/flags/us.png" : "/assets/flags/br.png"}
+                alt=""
+                width={20}
+                height={14}
+              />
+            </button>
+
+            <button
+              type="button"
+              className="
+                flex-1
+                flex
+                items-center
+                justify-center
+                gap-2
+                max-w-[150px]
+
+                h-[40px]
+                px-3
+
+                bg-yellow-400
+                rounded-xl
+
+                text-[var(--text-secondary)]
+
+                font-geist-sans
+                font-bold
+                text-sm
+
+                transition-all
+                duration-300
+                hover:bg-yellow-300
+                hover:scale-105
+                hover:shadow-lg
+                hover:shadow-[#E3AD28]/30
+
+                cursor-pointer
+              "
+            >
+              Let's chat
+            </button>
+
+          </div>
         </nav>
       )}
     </header>
