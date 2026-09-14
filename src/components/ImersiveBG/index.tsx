@@ -5,25 +5,18 @@ export function ImersiveBG() {
     <aside
       className="
         group
-        absolute
-        top-1/2
-        left-1/2
-        -translate-x-1/2
-        -translate-y-1/2
+        relative
+        shrink-0
 
-        w-[70%]
-        min-[300px]:max-[720px]:w-[100%]
+        w-[65%]
+        max-w-[280px]
+
+        sm:max-w-[340px]
+
         aspect-square
 
-        z-10
-
-        max-[450px]:top-[30%]
-        max-[450px]:translate-y--1/2
-
-        lg:left-auto
-        lg:right-20
-        lg:translate-x-0
-        lg:w-[35%]
+        lg:w-[320px]
+        lg:max-w-none
       "
     >
       <div

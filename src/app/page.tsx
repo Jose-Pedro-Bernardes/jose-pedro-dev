@@ -23,7 +23,6 @@ export default function Home() {
       >
         <div className="relative mx-auto w-full max-w-[1400px]">
 
-          <ImersiveBG />
           <HeroContent />
 
         </div>
