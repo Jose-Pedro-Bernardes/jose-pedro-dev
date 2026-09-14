@@ -11,7 +11,7 @@ export function HeroContent() {
         lg:flex-row-reverse
         items-center
         justify-center
-        lg:justify-between
+        
         gap-10
         lg:gap-12
 
@@ -20,9 +20,7 @@ export function HeroContent() {
         px-5
 
         sm:mt-30
-        lg:mt-0
         lg:px-0
-        lg:ml-20
       "
     >
       <ImersiveBG />

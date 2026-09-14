@@ -8,14 +8,14 @@ export function ImersiveBG() {
         relative
         shrink-0
 
-        w-[65%]
-        max-w-[280px]
+        w-[80%]
+        max-w-[340px]
 
-        sm:max-w-[340px]
+        sm:max-w-[420px]
 
         aspect-square
 
-        lg:w-[320px]
+        lg:w-[420px]
         lg:max-w-none
       "
     >
