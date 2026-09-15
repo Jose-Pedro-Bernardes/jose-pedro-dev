@@ -12,13 +12,12 @@ export function HeroContent() {
         items-center
         justify-center
 
-        hero:gap-1
-
+        
         font-geist-sans
         mt-10
         px-5
-
-        sm:mt-10
+        
+        hero:gap-1
         hero:items-center
         hero:justify-center
         hero:mt-25
