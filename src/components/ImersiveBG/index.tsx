@@ -8,15 +8,16 @@ export function ImersiveBG() {
         relative
         shrink-0
 
-        w-[80%]
+        w-[300px]
         max-w-[340px]
 
         sm:max-w-[420px]
 
         aspect-square
 
-        lg:w-[420px]
-        lg:max-w-none
+        hero:w-[380px]
+        hero:max-w-none
+        hero:mt-5
       "
     >
       <div
@@ -57,7 +58,8 @@ export function ImersiveBG() {
         "
         style={{
           maskImage: "radial-gradient(circle, black 50%, transparent 100%)",
-          WebkitMaskImage: "radial-gradient(circle, black 50%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(circle, black 50%, transparent 100%)",
         }}
       >
         <Image
@@ -68,8 +70,8 @@ export function ImersiveBG() {
           className="
             border-[var(--accent)]/10
             border-[4px]
-            w-[70%]
-            h-[70%]
+            w-[80%]
+            h-[80%]
             rounded-full
             object-cover
             pointer-events-none
@@ -78,7 +80,7 @@ export function ImersiveBG() {
         />
       </div>
 
-      <span className="absolute bottom-[18%] right-[30%] flex h-6 w-6 z-20">
+      <span className="absolute bottom-[14%] right-[30%] flex h-6 w-6 z-20">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
         <span className="relative inline-flex h-6 w-6 rounded-full bg-green-500 border-2 border-black" />
       </span>
