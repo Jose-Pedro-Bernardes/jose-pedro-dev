@@ -2,6 +2,10 @@
 
 
 @theme {
+  --breakpoint-hero: 1049px;
+}
+
+@theme {
   --font-dm-sans: var(--font-dm-sans);
   --font-montserrat: var(--font-montserrat);
   --font-display: var(--font-black-ops-one);
@@ -42,7 +46,7 @@
 
 :root {
   --bg-primary: linear-gradient(to right, #171600, #000000);
-  --header-bg: linear-gradient(to right, #171600, #000000);
+  --header-bg: linear-gradient(to right, #242304, #090909);
   --text-primary: rgba(255, 255, 255, 0.95);
   --text-secondary: rgba(27, 27, 27, 0.85);
   --accent1: #ffea00;
