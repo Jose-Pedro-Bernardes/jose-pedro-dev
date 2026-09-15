@@ -31,8 +31,8 @@ export function Header() {
           border-b border-[var(--accent)]/20
 
           transition-none
-          lg:transition-opacity
-          lg:duration-500
+          hero:transition-opacity
+          hero:duration-500
 
           ${scrolled || menuOpen ? "opacity-100" : "opacity-0"}
         `}
@@ -53,13 +53,13 @@ export function Header() {
           px-5
           pb-3
 
-          lg:pt-4
-          lg:px-20
-          lg:pb-4
+          hero:pt-4
+          hero:px-20
+          hero:pb-4
         "
       >
 
-        <div className="flex items-center gap-6 lg:gap-30">
+        <div className="flex items-center gap-6 hero:gap-30">
 
           <Link href="/">
             <p
@@ -69,7 +69,7 @@ export function Header() {
                 font-bold
                 text-xl
 
-                lg:text-2xl
+                hero:text-2xl
               "
             >
               JPD<span className="text-[var(--accent-soft)]">.</span>
@@ -78,7 +78,7 @@ export function Header() {
 
           {/* Navegação Desktop */}
           <nav
-            className="hidden lg:flex"
+            className="hidden hero:flex"
             aria-label="Navegação principal"
           >
             <ul className="flex gap-15">
@@ -109,7 +109,7 @@ export function Header() {
         </div>
 
         {/* Ações */}
-        <div className="flex items-center gap-3 lg:gap-3">
+        <div className="flex items-center gap-3 hero:gap-3">
 
           {/* Hamburger */}
           <button
@@ -122,7 +122,7 @@ export function Header() {
               items-center
               justify-center
 
-              lg:hidden
+              hero:hidden
 
               cursor-pointer
               opacity-90
@@ -136,13 +136,14 @@ export function Header() {
             />
           </button>
 
+          {/* Idioma */}
           <button
             type="button"
             aria-label="Trocar idioma"
             onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
             className="
               hidden
-              lg:flex
+              hero:flex
               items-center
               justify-center
               gap-2
@@ -166,25 +167,30 @@ export function Header() {
               transition-colors
               cursor-pointer
 
-              lg:min-w-[60px]
-              lg:px-3
+              hero:min-w-[60px]
+              hero:px-3
             "
           >
             <span>{language}</span>
 
             <Image
-              src={language === "EN" ? "/assets/flags/us.png" : "/assets/flags/br.png"}
+              src={
+                language === "EN"
+                  ? "/assets/flags/us.png"
+                  : "/assets/flags/br.png"
+              }
               alt=""
               width={20}
               height={14}
             />
           </button>
 
+          {/* Let's chat */}
           <button
             type="button"
             className="
               hidden
-              lg:flex
+              hero:flex
               items-center
               justify-center
               gap-2
@@ -201,7 +207,7 @@ export function Header() {
               font-geist-sans
               font-bold
               text-sm
-              
+
               transition-all
               duration-300
               hover:bg-yellow-300
@@ -211,8 +217,8 @@ export function Header() {
 
               cursor-pointer
 
-              lg:min-w-[60px]
-              lg:px-3
+              hero:min-w-[60px]
+              hero:px-3
             "
           >
             Let's chat
@@ -225,7 +231,7 @@ export function Header() {
       {menuOpen && (
         <nav
           className="
-            lg:hidden
+            hero:hidden
             border-t
             border-[var(--accent)]/20
             bg-[image:var(--header-bg)]
@@ -293,7 +299,11 @@ export function Header() {
               <span>{language}</span>
 
               <Image
-                src={language === "EN" ? "/assets/flags/us.png" : "/assets/flags/br.png"}
+                src={
+                  language === "EN"
+                    ? "/assets/flags/us.png"
+                    : "/assets/flags/br.png"
+                }
                 alt=""
                 width={20}
                 height={14}
