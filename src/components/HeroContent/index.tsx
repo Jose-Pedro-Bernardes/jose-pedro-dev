@@ -8,19 +8,21 @@ export function HeroContent() {
         relative
         z-0
         flex flex-col
-        lg:flex-row-reverse
+        hero:flex-row-reverse
         items-center
         justify-center
-        
-        gap-10
-        lg:gap-12
+
+        hero:gap-1
 
         font-geist-sans
-        mt-28
+        mt-10
         px-5
 
-        sm:mt-30
-        lg:px-0
+        sm:mt-10
+        hero:items-center
+        hero:justify-center
+        hero:mt-25
+        hero:px-20
       "
     >
       <ImersiveBG />
@@ -33,20 +35,25 @@ export function HeroContent() {
           items-center
           text-center
 
-          lg:items-start
-          lg:text-left
+          hero:items-start
+          hero:text-left
         "
       >
         <h1
           className="
-            text-[2.2rem]
+            text-[1.8rem]
+            leading-tight
             font-semibold
             text-[var(--text-primary)]
 
-            sm:text-[2.8rem]
+            sm:text-[2.1rem]
+            hero:text-[2.2rem]
           "
         >
-          {"{"}<span className="text-[var(--accent1)]">CODE</span>{"}"} you can see.
+          {"{"}
+          <span className="text-[var(--accent1)]">CODE</span>
+          {"}"} you can see.
+
           <span className="relative text-[var(--accent1)]">
             .
             <span
@@ -75,11 +82,11 @@ export function HeroContent() {
         <h2
           className="
             font-dm-sans
-            text-[1.05rem]
+            text-[0.95rem]
             font-bold
 
-            sm:text-[1.4rem]
-            lg:text-[1.6rem]
+            sm:text-[1.1rem]
+            hero:text-[1.2rem]
           "
         >
           <span className="text-[var(--text-primary)]">
@@ -94,11 +101,12 @@ export function HeroContent() {
         <p
           className="
             max-w-[400px]
-            text-[0.9rem]
+            text-[0.85rem]
+            leading-relaxed
             text-[var(--text-primary)]
 
-            sm:text-[1.05rem]
-            lg:text-[1.2rem]
+            sm:text-[0.95rem]
+            hero:text-[1rem]
           "
         >
           <span className="text-[var(--accent-soft)]">
@@ -118,12 +126,14 @@ export function HeroContent() {
             w-full
             max-w-[400px]
             sm:w-[400px]
+
             flex
             flex-col
             items-center
+
             gap-4
             mt-3
-            sm:mt-10
+
             sm:flex-row
             sm:gap-7
           "
@@ -137,16 +147,16 @@ export function HeroContent() {
               gap-4
 
               w-full
-
               sm:w-[190px]
 
-              h-[60px]
+              h-[55px]
 
               rounded-[15px]
               bg-yellow-400
               border-yellow-400
 
               font-bold
+              text-[0.9rem]
               text-black
 
               transition-all
@@ -187,37 +197,39 @@ export function HeroContent() {
 
           <button
             className="
-            group
-            flex
-            items-center
-            justify-center
-            
-            w-full
-            sm:w-[190px]
-            h-[60px]
-            gap-3
+              group
+              flex
+              items-center
+              justify-center
 
-            rounded-[15px]
-            border
-            border-[1.5px]
-            border-[var(--text-primary)]/80
+              w-full
+              sm:w-[190px]
 
-            bg-transparent
+              h-[55px]
+              gap-3
 
-            font-bold
-            text-[var(--text-primary)]/80
+              rounded-[15px]
+              border
+              border-[1.5px]
+              border-[var(--text-primary)]/80
 
-            transition-all
-            duration-300
+              bg-transparent
 
-            hover:bg-white/90
-            hover:text-black
-            hover:border-white
-            hover:scale-105
-            hover:shadow-lg
-            hover:shadow-white/20
+              font-bold
+              text-[0.9rem]
+              text-[var(--text-primary)]/80
 
-            cursor-pointer
+              transition-all
+              duration-300
+
+              hover:bg-white/90
+              hover:text-black
+              hover:border-white
+              hover:scale-105
+              hover:shadow-lg
+              hover:shadow-white/20
+
+              cursor-pointer
             "
           >
             Contact Me
