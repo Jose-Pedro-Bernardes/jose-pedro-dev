@@ -1,6 +1,5 @@
 import { StackCarousel } from "@/components/StackCarousel";
 import { Header } from "@/components/Header";
-import { ImersiveBG } from "@/components/ImersiveBG";
 import { HeroContent } from "@/components/HeroContent";
 import { AboutMe } from "@/components/AboutMe";
 
