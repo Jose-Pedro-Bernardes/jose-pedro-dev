@@ -307,6 +307,8 @@ export function Header() {
                 alt=""
                 width={20}
                 height={14}
+                loading="eager"
+                priority
               />
             </button>
 

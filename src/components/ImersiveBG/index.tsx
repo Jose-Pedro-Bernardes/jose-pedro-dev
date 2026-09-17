@@ -43,6 +43,7 @@ export function ImersiveBG() {
           alt=""
           className="absolute w-full h-full object-cover pointer-events-none select-none"
           loading="eager"
+          priority
         />
       </div>
 
@@ -67,6 +68,8 @@ export function ImersiveBG() {
           width={700}
           height={700}
           alt="José Pedro Bernardes"
+          loading="eager"
+          priority
           className="
             border-[var(--accent)]/10
             border-[4px]
