@@ -71,6 +71,7 @@ export function ImersiveBG() {
           loading="eager"
           priority
           className="
+
             border-[var(--accent)]/10
             border-[4px]
             w-[80%]
@@ -79,6 +80,7 @@ export function ImersiveBG() {
             object-cover
             pointer-events-none
             select-none
+            rotate-[3deg]
           "
         />
       </div>
