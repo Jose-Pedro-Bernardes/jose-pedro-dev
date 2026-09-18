@@ -41,12 +41,12 @@ export function StackCarousel() {
           >
             <span
               className="
-                font-dm-sans
+                font-display
                 text-[3rem]
-                font-semibold
+                
                 tracking-wider
                 text-[var(--text-primary)]
-                opacity-90
+                opacity-50
                 whitespace-nowrap
 
                 sm:text-[4rem]
@@ -57,7 +57,7 @@ export function StackCarousel() {
 
             <span
               aria-hidden="true"
-              className="text-[var(--accent1)] text-[5rem] "
+              className="text-[var(--accent1)] text-[5rem] opacity-50"
             >
               ·
             </span>
