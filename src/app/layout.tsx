@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { dmSans, montserrat, blackOpsOne, geistMono, geistSans } from "@/lib/fonts";
+import { dmSans, montserrat, blackOpsOne, geistMono, geistSans, limelight } from "@/lib/fonts";
 
   
 
@@ -24,7 +24,8 @@ export default function RootLayout({
        ${geistMono.variable}
        ${dmSans.variable}
        ${montserrat.variable}
-       ${blackOpsOne.variable} 
+       ${blackOpsOne.variable}
+       ${limelight.variable}
        h-full antialiased`
       }
       suppressHydrationWarning

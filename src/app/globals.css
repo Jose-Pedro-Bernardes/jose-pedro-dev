@@ -27,6 +27,7 @@
   --font-display: var(--font-black-ops-one);
   --font-geist-sans: var(--font-geist-sans);
   --font-geist-mono: var(--font-geist-mono);
+  --font-limelight: var(--font-limelight);
 
   --animate-spin-slow: spin-slow 60s linear infinite;
 

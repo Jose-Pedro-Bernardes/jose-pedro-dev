@@ -41,7 +41,7 @@ export function StackCarousel() {
           >
             <span
               className="
-                font-display
+                font-limelight
                 text-[3rem]
                 
                 tracking-wider

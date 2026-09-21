@@ -1,4 +1,4 @@
-import { Montserrat, DM_Sans, Black_Ops_One, Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, DM_Sans, Black_Ops_One, Geist, Geist_Mono, Limelight } from "next/font/google";
 
 
 export const geistSans = Geist({
@@ -27,4 +27,10 @@ export const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-black-ops-one",
+});
+
+export const limelight= Limelight({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-limelight",
 });
