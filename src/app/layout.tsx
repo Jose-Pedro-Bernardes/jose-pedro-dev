@@ -5,7 +5,7 @@ import { dmSans, montserrat, blackOpsOne, geistMono, geistSans } from "@/lib/fon
   
 
 export const metadata: Metadata = {
-  title: "Portfolio -- Dev Bernardes",
+  title: "José Pedro Bernardes - Full Stack Developer",
   description:
     "Full stack developer portfolio showcasing React, Next.js and TypeScript projects. " +
     "Building fast, well-crafted web interfaces.",
