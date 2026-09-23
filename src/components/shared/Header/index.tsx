@@ -104,6 +104,28 @@ export function Header() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1CNYPpSB25YrZbOtQIhhbB6jLGVG2auhX?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    inline-block
+                    text-sm
+                    text-[var(--text-primary)]/90
+                    font-medium
+                    font-geist-sans
+                    transition-all
+                    duration-200
+                    ease-out
+                    hover:text-[var(--accent1)]
+                    hover:scale-110
+                    origin-center
+                  "
+                >
+                  Resume / CV
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -186,7 +208,10 @@ export function Header() {
           </button>
 
           {/* Let's chat */}
-          <button
+          <a
+            href="https://linktr.ee/josepedrodev"
+            target="_blank"
+            rel="noopener noreferrer"
             type="button"
             className="
               hidden
@@ -222,7 +247,7 @@ export function Header() {
             "
           >
             Let's chat
-          </button>
+          </a>
 
         </div>
       </div>
@@ -261,6 +286,26 @@ export function Header() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1CNYPpSB25YrZbOtQIhhbB6jLGVG2auhX?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="
+                  block
+                  font-dm-sans
+                  text-base
+                  font-medium
+                  text-[var(--text-primary)]/90
+                  transition-colors
+                  duration-200
+                  hover:text-[var(--accent1)]
+                "
+              >
+                Resume / CV
+              </a>
+            </li>
           </ul>
 
           {/* Ações no mobile */}
