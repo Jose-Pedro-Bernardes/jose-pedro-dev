@@ -1,4 +1,4 @@
-import { Link, MessageCircleMore} from "lucide-react";
+import { MessageCircleMore} from "lucide-react";
 import { ImersiveBG } from "@/components/home/HeroContent/ImersiveBG";
 import Image from "next/image";
 
@@ -120,7 +120,7 @@ export function HeroContent() {
             sm:gap-4
           "
         >
-          <Link
+          <a
             href="/projects"
             className="
               group
@@ -178,7 +178,7 @@ export function HeroContent() {
                 strokeLinejoin="round"
               />
             </svg>
-          </Link>
+          </a>
 
           {/* Grupo: Contact Me (menor) + botão do GitHub, lado a lado */}
           <div className="flex items-center gap-3">
