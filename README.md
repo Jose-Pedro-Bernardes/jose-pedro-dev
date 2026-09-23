@@ -35,19 +35,34 @@ Personal portfolio of José Pedro Bernardes, a Full Stack Developer, built with 
 │   │   └── page.tsx
 │   │
 │   ├── components/
-│   │   ├── AboutMe/
-│   │   │   └── index.tsx
-│   │   ├── Header/
-│   │   │   └── index.tsx
-│   │   ├── HeroContent/
-│   │   │   └── index.tsx
-│   │   ├── ImersiveBG/
-│   │   │   └── index.tsx
-│   │   └── StackCarousel/
-│   │       └── index.tsx
+│   │   ├── home/
+│   │   │   ├── AboutMe/
+│   │   │   │   └── index.tsx
+│   │   │   ├── HeroContent/
+│   │   │   │   ├── ImersiveBG/
+│   │   │   │   │   └── index.tsx
+│   │   │   │   └── index.tsx
+│   │   │   └── StackCarousel/
+│   │   │       └── index.tsx
+│   │   │
+│   │   ├── how-i-work/
+│   │   │   └── HeroContent/
+│   │   │       └── index.tsx
+│   │   │
+│   │   ├── projects/
+│   │   │   └── HeroContent/
+│   │   │       └── index.tsx
+│   │   │
+│   │   └── shared/
+│   │       ├── Footer/
+│   │       │   └── index.tsx
+│   │       └── Header/
+│   │           └── index.tsx
 │   │
 │   └── lib/
 │       ├── fonts.ts
+│       ├── i18n/
+│       │   └── languages.ts
 │       └── nav-links.ts
 │
 ├── .gitignore
@@ -60,9 +75,9 @@ Personal portfolio of José Pedro Bernardes, a Full Stack Developer, built with 
 ├── package-lock.json
 ├── postcss.config.mjs
 ├── README.md
-├── postcss.config.mjs
 └── tsconfig.json
 ```
+
 
 ## 🛠️ Getting Started
 
