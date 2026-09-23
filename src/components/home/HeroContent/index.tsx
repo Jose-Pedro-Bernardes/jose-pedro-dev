@@ -1,4 +1,4 @@
-import { MessageCircleMore} from "lucide-react";
+import { Link, MessageCircleMore} from "lucide-react";
 import { ImersiveBG } from "@/components/home/HeroContent/ImersiveBG";
 import Image from "next/image";
 
@@ -120,7 +120,8 @@ export function HeroContent() {
             sm:gap-4
           "
         >
-          <button
+          <Link
+            href="/projects"
             className="
               group
               flex
@@ -177,11 +178,14 @@ export function HeroContent() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </Link>
 
           {/* Grupo: Contact Me (menor) + botão do GitHub, lado a lado */}
           <div className="flex items-center gap-3">
-            <button
+            <a
+              href="https://linktr.ee/josepedrodev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 group
                 flex
@@ -229,7 +233,7 @@ export function HeroContent() {
                   group-hover:scale-160
                 "
               />
-            </button>
+            </a>
 
             <div className="relative group">
               {/* Balão */}
@@ -277,7 +281,10 @@ export function HeroContent() {
               </span>
 
               {/* Botão */}
-              <button
+              <a
+                href="https://github.com/Jose-Pedro-Bernardes"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub"
                 className="
                   group/button
@@ -324,7 +331,7 @@ export function HeroContent() {
                     group-hover/button:opacity-100
                   "
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
