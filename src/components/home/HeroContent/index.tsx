@@ -1,5 +1,5 @@
 import { MessageCircleMore} from "lucide-react";
-import { ImersiveBG } from "@/components/ImersiveBG";
+import { ImersiveBG } from "@/components/home/HeroContent/ImersiveBG";
 import Image from "next/image";
 
 export function HeroContent() {

@@ -1,7 +1,7 @@
-import { StackCarousel } from "@/components/StackCarousel";
-import { Header } from "@/components/Header";
-import { HeroContent } from "@/components/HeroContent";
-import { AboutMe } from "@/components/AboutMe";
+import { StackCarousel } from "@/components/home/StackCarousel";
+import { Header } from "@/components/shared/Header";
+import { HeroContent } from "@/components/home/HeroContent";
+import { AboutMe } from "@/components/home/AboutMe";
 
 export default function Home() {
   return (
@@ -12,7 +12,6 @@ export default function Home() {
       <section
         className="
           relative
-          bg-[image:var(--bg-primary)]
           z-0
           overflow-hidden
           min-h-[650px]
