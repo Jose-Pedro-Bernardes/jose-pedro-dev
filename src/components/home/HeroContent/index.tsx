@@ -1,8 +1,15 @@
-import { MessageCircleMore} from "lucide-react";
+"use client";
+
+import { MessageCircleMore } from "lucide-react";
 import { ImersiveBG } from "@/components/home/HeroContent/ImersiveBG";
+import { translations } from "@/lib/i18n/translations";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import Image from "next/image";
 
 export function HeroContent() {
+  const { language } = useLanguage();
+  const t = translations[language].home;
+
   return (
     <div
       className="
@@ -13,7 +20,6 @@ export function HeroContent() {
         items-center
         justify-center
 
-        
         font-geist-sans
         mt-10
         mb-35
@@ -41,6 +47,7 @@ export function HeroContent() {
           hero:text-left
         "
       >
+        {/* Título */}
         <h1
           className="
             text-[1.8rem]
@@ -53,8 +60,11 @@ export function HeroContent() {
           "
         >
           {"{"}
-          <span className="text-[var(--accent1)]">CODE</span>
-          {"}"} you can see
+          <span className="text-[var(--accent1)]">
+            {t.hero.title.code}
+          </span>
+          {"}"}
+          {t.hero.title.line1}
 
           <span className="relative text-[var(--accent1)]">
             .
@@ -62,10 +72,11 @@ export function HeroContent() {
 
           <br />
 
-          SOLUTIONS & EXPERIENCES
+          {t.hero.title.line2}
           <span className="text-[var(--accent1)]">.</span>
         </h1>
 
+        {/* Nome / Cargo */}
         <h2
           className="
             font-dm-sans
@@ -81,10 +92,11 @@ export function HeroContent() {
           </span>
 
           <span className="text-[var(--accent-soft)]">
-            {" "}· Full Stack Developer
+            {" "}· {t.hero.role}
           </span>
         </h2>
 
+        {/* Descrição */}
         <p
           className="
             max-w-[400px]
@@ -96,11 +108,13 @@ export function HeroContent() {
             hero:text-[1rem]
           "
         >
-          Full Stack Developer focused on building
+          {t.hero.description.before}
+
           <span className="text-[var(--accent-soft)]">
-            {" "}clean, purposeful web experiences
+            {t.hero.description.highlight}
           </span>
-          {" "}from interface to backend.
+
+          {t.hero.description.after}
         </p>
 
         <div
@@ -120,6 +134,7 @@ export function HeroContent() {
             sm:gap-4
           "
         >
+          {/* See My Work */}
           <a
             href="/projects"
             className="
@@ -155,7 +170,7 @@ export function HeroContent() {
               cursor-pointer
             "
           >
-            <span>See My Work</span>
+            <span>{t.hero.buttons.seeMyWork}</span>
 
             <svg
               width="20"
@@ -180,7 +195,7 @@ export function HeroContent() {
             </svg>
           </a>
 
-          {/* Grupo: Contact Me (menor) + botão do GitHub, lado a lado */}
+          {/* Contact Me + GitHub */}
           <div className="flex items-center gap-3">
             <a
               href="https://linktr.ee/josepedrodev"
@@ -222,7 +237,7 @@ export function HeroContent() {
                 cursor-pointer
               "
             >
-              Contact Me
+              {t.hero.buttons.contactMe}
 
               <MessageCircleMore
                 size={18}
@@ -277,15 +292,15 @@ export function HeroContent() {
                   after:border-t-white
                 "
               >
-                Miaw! 🐈
+                {t.hero.github.tooltip}
               </span>
 
-              {/* Botão */}
+              {/* Botão GitHub */}
               <a
                 href="https://github.com/Jose-Pedro-Bernardes"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
+                aria-label={t.hero.github.ariaLabel}
                 className="
                   group/button
                   flex
@@ -320,7 +335,7 @@ export function HeroContent() {
               >
                 <Image
                   src="/assets/githu.png"
-                  alt="GitHub"
+                  alt={t.hero.github.ariaLabel}
                   width={30}
                   height={30}
                   className="
@@ -336,6 +351,7 @@ export function HeroContent() {
           </div>
         </div>
       </div>
+
       {/* Scroll indicator */}
       <div
         className="
@@ -360,6 +376,7 @@ export function HeroContent() {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-label={t.hero.scroll.ariaLabel}
         >
           <path
             d="M6 9L12 15L18 9"

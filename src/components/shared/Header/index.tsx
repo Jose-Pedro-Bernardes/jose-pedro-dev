@@ -1,14 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NAV_LINKS } from "@/lib/nav-links";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { NAV_LINKS } from "@/components/shared/Header/links/nav-links";
+import { translations } from "@/lib/i18n/translations";
 import Link from "next/link";
 import Image from "next/image";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<"EN" | "PT">("EN");
+
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language].shared;
 
   useEffect(() => {
     function handleScroll() {
@@ -79,10 +83,10 @@ export function Header() {
           {/* Navegação Desktop */}
           <nav
             className="hidden hero:flex"
-            aria-label="Navegação principal"
+            aria-label={t.header.accessibility.mainNavigation}
           >
             <ul className="flex gap-15">
-              {NAV_LINKS.map(({ label, href }) => (
+              {NAV_LINKS.map(({ key, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -100,10 +104,11 @@ export function Header() {
                       origin-center
                     "
                   >
-                    {label}
+                    {t.header.navigation[key]}
                   </Link>
                 </li>
               ))}
+
               <li>
                 <a
                   href="https://drive.google.com/drive/folders/1CNYPpSB25YrZbOtQIhhbB6jLGVG2auhX?usp=sharing"
@@ -123,7 +128,7 @@ export function Header() {
                     origin-center
                   "
                 >
-                  Resume / CV
+                  {t.header.navigation.resume}
                 </a>
               </li>
             </ul>
@@ -136,7 +141,11 @@ export function Header() {
           {/* Hamburger */}
           <button
             type="button"
-            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={
+              menuOpen
+                ? t.header.accessibility.closeMenu
+                : t.header.accessibility.openMenu
+            }
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
             className="
@@ -161,8 +170,10 @@ export function Header() {
           {/* Idioma */}
           <button
             type="button"
-            aria-label="Trocar idioma"
-            onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
+            aria-label={t.header.accessibility.changeLanguage}
+            onClick={() =>
+              setLanguage(language === "en" ? "pt-BR" : "en")
+            }
             className="
               hidden
               hero:flex
@@ -193,11 +204,11 @@ export function Header() {
               hero:px-3
             "
           >
-            <span>{language}</span>
+            <span>{language === "en" ? "EN" : "PT"}</span>
 
             <Image
               src={
-                language === "EN"
+                language === "en"
                   ? "/assets/flags/us.png"
                   : "/assets/flags/br.png"
               }
@@ -212,7 +223,6 @@ export function Header() {
             href="https://linktr.ee/josepedrodev"
             target="_blank"
             rel="noopener noreferrer"
-            type="button"
             className="
               hidden
               hero:flex
@@ -246,7 +256,7 @@ export function Header() {
               hero:px-3
             "
           >
-            Let's chat
+            {t.header.navigation.letsChat}
           </a>
 
         </div>
@@ -263,10 +273,11 @@ export function Header() {
             px-5
             py-5
           "
-          aria-label="Navegação mobile"
+          aria-label={t.header.accessibility.mobileNavigation}
         >
           <ul className="flex flex-col gap-5">
-            {NAV_LINKS.map(({ label, href }) => (
+
+            {NAV_LINKS.map(({ key, href }) => (
               <li key={href}>
                 <Link
                   href={href}
@@ -282,10 +293,11 @@ export function Header() {
                     hover:text-[var(--accent1)]
                   "
                 >
-                  {label}
+                  {t.header.navigation[key]}
                 </Link>
               </li>
             ))}
+
             <li>
               <a
                 href="https://drive.google.com/drive/folders/1CNYPpSB25YrZbOtQIhhbB6jLGVG2auhX?usp=sharing"
@@ -303,18 +315,22 @@ export function Header() {
                   hover:text-[var(--accent1)]
                 "
               >
-                Resume / CV
+                {t.header.navigation.resume}
               </a>
             </li>
+
           </ul>
 
           {/* Ações no mobile */}
           <div className="flex items-center gap-3 mt-6 pt-5 border-t border-[var(--accent)]/20">
 
+            {/* Idioma */}
             <button
               type="button"
-              aria-label="Trocar idioma"
-              onClick={() => setLanguage(language === "EN" ? "PT" : "EN")}
+              aria-label={t.header.accessibility.changeLanguage}
+              onClick={() =>
+                setLanguage(language === "en" ? "pt-BR" : "en")
+              }
               className="
                 flex
                 items-center
@@ -341,11 +357,11 @@ export function Header() {
                 cursor-pointer
               "
             >
-              <span>{language}</span>
+              <span>{language === "en" ? "EN" : "PT"}</span>
 
               <Image
                 src={
-                  language === "EN"
+                  language === "en"
                     ? "/assets/flags/us.png"
                     : "/assets/flags/br.png"
                 }
@@ -357,8 +373,11 @@ export function Header() {
               />
             </button>
 
-            <button
-              type="button"
+            {/* Let's chat */}
+            <a
+              href="https://linktr.ee/josepedrodev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 flex-1
                 flex
@@ -389,8 +408,8 @@ export function Header() {
                 cursor-pointer
               "
             >
-              Let's chat
-            </button>
+              {t.header.navigation.letsChat}
+            </a>
 
           </div>
         </nav>

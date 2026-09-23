@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { dmSans, montserrat, blackOpsOne, geistMono, geistSans, limelight } from "@/lib/fonts";
-
-  
+import {
+  dmSans,
+  montserrat,
+  blackOpsOne,
+  geistMono,
+  geistSans,
+  limelight,
+} from "@/lib/fonts";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 export const metadata: Metadata = {
   title: "José Pedro Bernardes - Full Stack Developer",
@@ -31,7 +37,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
+        <LanguageProvider>
           {children}
+        </LanguageProvider>
       </body>
     </html>
   );

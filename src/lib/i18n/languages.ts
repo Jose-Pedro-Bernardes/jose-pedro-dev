@@ -1,3 +1,12 @@
-export type Language = "EN" | "PT";
+export const languages = {
+  "pt-BR": {
+    label: "Português",
+    flag: "/assets/flags/br.png",
+  },
+  en: {
+    label: "English",
+    flag: "/assets/flags/us.png",
+  },
+} as const;
 
-export const DEFAULT_LANGUAGE: Language = "EN"
+export type Language = keyof typeof languages;

@@ -10,7 +10,7 @@ export default function HowIWork() {
         h-screen
       "
     >
-        <Header></Header>
+        <Header />
         <HeroContent />
     </div>
   );
