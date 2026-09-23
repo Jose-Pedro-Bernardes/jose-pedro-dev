@@ -1,55 +1,111 @@
-Portfólio pessoal de José Pedro Bernardes, desenvolvedor full stack, construído com Next.js e Tailwind CSS.
+# Personal Portfolio
 
-🚀 Stack
-Next.js 16 — App Router + Turbopack
-React 19
-TypeScript
-Tailwind CSS v4
-next-themes — alternância entre tema claro e escuro
-📁 Estrutura do projeto
-src/
-  app/
-    layout.tsx        # Layout raiz + ThemeProvider
-    page.tsx           # Home
-  components/
-    Header.tsx          # Cabeçalho (logo + navegação)
-    Logo.tsx             # Logotipo com link para home
-  lib/
-    nav-links.ts          # Dados dos links de navegação
-public/
-  assets/                  # Imagens estáticas (logo, etc.)
-🛠️ Como rodar localmente
+Personal portfolio of José Pedro Bernardes, a Full Stack Developer, built with Next.js and Tailwind CSS.
 
-Clone o repositório e instale as dependências:
+## 🚀 Tech Stack
 
-bash
+* Next.js 16 — App Router + Turbopack
+* React 19
+* TypeScript
+* Tailwind CSS v4
+
+## 📁 Project Structure
+
+```text
+.
+├── public/
+│   └── assets/
+│       ├── flags/
+│       │   ├── br.png
+│       │   └── us.png
+│       ├── eula.jpg
+│       ├── githu.png
+│       ├── hamburger.png
+│       └── numberbg.png
+│
+├── src/
+│   ├── app/
+│   │   ├── how-i-work/
+│   │   │   └── page.tsx
+│   │   ├── projects/
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── AboutMe/
+│   │   │   └── index.tsx
+│   │   ├── Header/
+│   │   │   └── index.tsx
+│   │   ├── HeroContent/
+│   │   │   └── index.tsx
+│   │   ├── ImersiveBG/
+│   │   │   └── index.tsx
+│   │   └── StackCarousel/
+│   │       └── index.tsx
+│   │
+│   └── lib/
+│       ├── fonts.ts
+│       └── nav-links.ts
+│
+├── .gitignore
+├── AGENTS.md
+├── CLAUDE.md
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── README.md
+├── postcss.config.mjs
+└── tsconfig.json
+```
+
+## 🛠️ Getting Started
+
+Clone the repository and install the dependencies:
+
+```bash
 npm install
+```
 
-Rode o servidor de desenvolvimento:
+Start the development server:
 
-bash
+```bash
 npm run dev
+```
 
-Abra http://localhost:3000 no navegador.
+Open http://localhost:3000 in your browser.
 
-📦 Scripts disponíveis
-Comando	Descrição
-npm run dev	Inicia o servidor de desenvolvimento
-npm run build	Gera o build de produção
-npm run start	Roda o build de produção
-npm run lint	Executa o linter (ESLint)
-✅ Roadmap
- Estrutura inicial do projeto (Next.js + Tailwind v4)
- Header com logo e navegação
- Botão de alternância de tema (dark/light)
- Seção "Sobre mim"
- Seção de Skills
- Seção de Projetos
- Seção de Contato
- Deploy na Vercel
-📄 Licença
+## 📦 Available Scripts
 
-Este projeto é de uso pessoal.
+| Command         | Description                   |
+| --------------- | ----------------------------- |
+| `npm run dev`   | Starts the development server |
+| `npm run build` | Creates the production build  |
+| `npm run start` | Runs the production build     |
+| `npm run lint`  | Runs ESLint                   |
 
-📬 Contato
-E-mail: josepedro.bernardes1@gmail.com
+## 🚧 Roadmap
+
+* [x] Initial project structure
+* [x] Header and navigation
+* [x] Hero section
+* [x] About Me section
+* [x] Skills / Stack section
+* [x] Projects page
+* [x] How I Work page
+* [x] Responsive layout
+* [x] Language selection
+* [x] Deploy to Vercel
+
+## 📄 License
+
+This project is for personal use.
+
+## 📬 Contact
+
+Email: [josepedro.bernardes1@gmail.com](mailto:josepedro.bernardes1@gmail.com)
