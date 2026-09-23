@@ -13,13 +13,13 @@ export const geistMono = Geist_Mono({
 
 export const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400"], // Regular
+  weight: ["400"],
   variable: "--font-dm-sans",
 });
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["600", "700"], // SemiBold e Bold
+  weight: ["600", "700"],
   variable: "--font-montserrat",
 });
 
