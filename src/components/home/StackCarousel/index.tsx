@@ -16,6 +16,7 @@ export function StackCarousel() {
         relative
         z-10
         mt-8
+        mb-2
         w-full
         h-[120px]
         border-[var(--accent1)]/20
