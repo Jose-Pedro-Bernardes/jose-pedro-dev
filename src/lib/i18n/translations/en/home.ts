@@ -9,9 +9,9 @@ const home = {
     role: "Full Stack Developer",
 
     description: {
-      before: "Full Stack Developer focused on building",
-      highlight: " clean, purposeful web experiences",
-      after: " from interface to backend.",
+      before: "Full Stack Developer building",
+      highlight: " real tools for real workflows",
+      after: ", from the interface to the database. React, Next.js, TypeScript, Node.js, Django and SQL.",
     },
 
     buttons: {
