@@ -60,15 +60,11 @@ export function HeroContent() {
           "
         >
           {"{"}
-          <span className="text-[var(--accent1)]">
-            {t.hero.title.code}
-          </span>
+          <span className="text-[var(--accent1)]">{t.hero.title.code}</span>
           {"}"}
           {t.hero.title.line1}
 
-          <span className="relative text-[var(--accent1)]">
-            .
-          </span>
+          <span className="relative text-[var(--accent1)]">.</span>
 
           <br />
 
@@ -91,9 +87,7 @@ export function HeroContent() {
             José Pedro Bernardes
           </span>
 
-          <span className="text-[var(--accent-soft)]">
-            {" "}· {t.hero.role}
-          </span>
+          <span className="text-[var(--accent-soft)]"> · {t.hero.role}</span>
         </h2>
 
         {/* Descrição */}
@@ -120,7 +114,6 @@ export function HeroContent() {
         <div
           className="
             w-full
-            max-w-[400px]
             sm:w-auto
 
             flex
@@ -250,57 +243,13 @@ export function HeroContent() {
               />
             </a>
 
-            <div className="relative group">
-              {/* Balão */}
-              <span
-                className="
-                  pointer-events-none
-                  absolute
-                  bottom-full
-                  left-1/2
-                  mb-3
-                  -translate-x-1/2
-                  translate-y-2
-                  opacity-0
-                  scale-90
-
-                  whitespace-nowrap
-                  rounded-lg
-                  bg-white
-                  px-3
-                  py-1.5
-
-                  text-sm
-                  font-bold
-                  text-black
-
-                  shadow-lg
-
-                  transition-all
-                  duration-200
-
-                  group-hover:translate-y-0
-                  group-hover:opacity-100
-                  group-hover:scale-100
-
-                  after:absolute
-                  after:left-1/2
-                  after:top-full
-                  after:-translate-x-1/2
-                  after:border-[6px]
-                  after:border-transparent
-                  after:border-t-white
-                "
-              >
-                {t.hero.github.tooltip}
-              </span>
-
-              {/* Botão GitHub */}
+            <div className="flex items-center gap-3">
+              {/* Botão LinkedIn */}
               <a
-                href="https://github.com/Jose-Pedro-Bernardes"
+                href="https://www.linkedin.com/in/jose-pedro-bernardes-react"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={t.hero.github.ariaLabel}
+                aria-label="LinkedIn"
                 className="
                   group/button
                   flex
@@ -318,35 +267,127 @@ export function HeroContent() {
 
                   bg-transparent
 
-                  text-[var(--text-primary)]/80
-
                   transition-all
                   duration-300
 
-                  hover:bg-white/90
-                  hover:text-black
-                  hover:border-white
+                  hover:bg-[#0A66C2]
+                  hover:border-[#0A66C2]
                   hover:scale-105
                   hover:shadow-lg
-                  hover:shadow-white/20
+                  hover:shadow-[#0A66C2]/40
 
                   cursor-pointer
                 "
               >
                 <Image
-                  src="/assets/githu.png"
-                  alt={t.hero.github.ariaLabel}
+                  src="/assets/linkedin.png"
+                  alt="LinkedIn"
                   width={30}
                   height={30}
                   className="
                     opacity-70
                     transition-all
                     duration-300
-                    group-hover/button:invert
                     group-hover/button:opacity-100
+                    group-hover/button:brightness-0
+                    group-hover/button:invert
                   "
                 />
               </a>
+
+              {/* GitHub + balão (o balão só existe aqui) */}
+              <div className="relative group">
+                <span
+                  className="
+                    pointer-events-none
+                    absolute
+                    bottom-full
+                    left-1/2
+                    mb-3
+                    -translate-x-1/2
+                    translate-y-2
+                    opacity-0
+                    scale-90
+
+                    whitespace-nowrap
+                    rounded-lg
+                    bg-white
+                    px-3
+                    py-1.5
+
+                    text-sm
+                    font-bold
+                    text-black
+
+                    shadow-lg
+
+                    transition-all
+                    duration-200
+
+                    group-hover:translate-y-0
+                    group-hover:opacity-100
+                    group-hover:scale-100
+
+                    after:absolute
+                    after:left-1/2
+                    after:top-full
+                    after:-translate-x-1/2
+                    after:border-[6px]
+                    after:border-transparent
+                    after:border-t-white
+                  "
+                >
+                  {t.hero.github.tooltip}
+                </span>
+
+                <a
+                  href="https://github.com/Jose-Pedro-Bernardes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.hero.github.ariaLabel}
+                  className="
+                    group/button
+                    flex
+                    items-center
+                    justify-center
+                    shrink-0
+
+                    w-[50px]
+                    h-[50px]
+
+                    rounded-[15px]
+                    border
+                    border-[1.5px]
+                    border-[var(--text-primary)]/80
+
+                    bg-transparent
+
+                    transition-all
+                    duration-300
+
+                    hover:bg-[#2b3137]
+                    hover:border-white
+                    hover:scale-105
+                    hover:shadow-lg
+                    hover:shadow-white/20
+
+                    cursor-pointer
+                  "
+                >
+                  <Image
+                    src="/assets/githu.png"
+                    alt={t.hero.github.ariaLabel}
+                    width={30}
+                    height={30}
+                    className="
+                      opacity-70
+                      transition-all
+                      duration-300
+                      group-hover/button:opacity-100
+                    "
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
