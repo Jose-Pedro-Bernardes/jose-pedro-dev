@@ -61,14 +61,64 @@
   }
 }
 
+/* ========== PALETA (terracota + grafite) ========== */
+
 :root {
-  --bg-primary: linear-gradient(to right, #171600, #000000);
-  --header-bg: linear-gradient(to right, #242304, #090909);
-  --text-primary: rgba(255, 255, 255, 0.95);
+  color-scheme: light dark;
+
+  /* Tema claro (padrão) */
+  --background: #faf8f5;
+  --surface: #ffffff;
+  --foreground: #1c1917;
+  --muted: #6b645c;
+  --border: #e7e2da;
+  --accent: #c2410c;
+  --on-accent: #ffffff;
+  --glow: rgba(194, 65, 12, 0.14);
+
+  /* LEGADO: aliases para os componentes atuais. Apagar ao migrar. */
+  --bg-primary: linear-gradient(var(--background), var(--background));
+  --header-bg: linear-gradient(var(--background), var(--background));
+  --text-primary: var(--foreground);
   --text-secondary: rgba(27, 27, 27, 0.85);
-  --accent1: #ffea00;
-  --accent: #ffea00;
+  --accent1: var(--accent);
+  --accent-soft: var(--accent);
   --accent-button: #1e1505;
-  --accent-soft: #e8d652;
   --bg-Opacity: 20%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Tema escuro */
+    --background: #121110;
+    --surface: #1b1917;
+    --foreground: #f5f2ee;
+    --muted: #a39b90;
+    --border: #2c2926;
+    --accent: #ea7a4a;
+    --on-accent: #1a0f08;
+    --glow: rgba(234, 122, 74, 0.14);
+  }
+}
+
+/* Expõe os tokens como classes do Tailwind:
+   bg-background, bg-surface, text-foreground, text-muted,
+   border-border, bg-accent, text-accent, text-on-accent */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.hero-glow {
+  background: radial-gradient(60% 50% at 75% 30%, var(--glow), transparent 70%);
 }
