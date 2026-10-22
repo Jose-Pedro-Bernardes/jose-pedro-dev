@@ -32,14 +32,11 @@ export default function RootLayout({
        ${montserrat.variable}
        ${blackOpsOne.variable}
        ${limelight.variable}
-       h-full antialiased`
-      }
+       h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
