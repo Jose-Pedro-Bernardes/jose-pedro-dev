@@ -1,6 +1,6 @@
 import { StackCarousel } from "@/components/home/StackCarousel";
 import { Header } from "@/components/shared/Header";
-import { HeroContent } from "@/components/home/HeroContent";
+import { HeroContent } from "@/reference/HeroContent";
 
 export default function Home() {
   return (
