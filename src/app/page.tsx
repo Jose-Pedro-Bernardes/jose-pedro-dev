@@ -1,5 +1,5 @@
 import { StackCarousel } from "@/components/home/StackCarousel";
-import { Header } from "@/components/shared/Header";
+import { Header } from "@/reference/Header";
 import { HeroContent } from "@/reference/HeroContent";
 
 export default function Home() {

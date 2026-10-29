@@ -1,5 +1,5 @@
 import { HeroContent } from "@/components/projects/HeroContent";
-import { Header } from "@/components/shared/Header";
+import { Header } from "@/reference/Header";
 
 export default function Projects() {
   return (

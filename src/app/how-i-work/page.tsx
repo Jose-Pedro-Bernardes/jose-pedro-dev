@@ -1,17 +1,16 @@
 import { HeroContent } from "@/components/how-i-work/HeroContent";
-import {Header} from "@/components/shared/Header";
+import { Header } from "@/reference/Header";
 
 export default function HowIWork() {
-
   return (
-    <div 
+    <div
       className="
         bg-[image:var(--bg-primary)] 
         h-screen
       "
     >
-        <Header />
-        <HeroContent />
+      <Header />
+      <HeroContent />
     </div>
   );
 }
