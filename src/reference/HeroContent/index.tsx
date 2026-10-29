@@ -11,8 +11,18 @@ export function HeroContent() {
   const t = translations[language].home;
 
   return (
-    <div
+    <section
       className="
+          relative
+          z-0
+          overflow-hidden
+          min-h-[650px]
+          sm:min-h-[700px]
+          lg:min-h-[600px]
+        "
+    >
+      <div
+        className="
         relative
         z-0
         flex flex-col
@@ -32,11 +42,11 @@ export function HeroContent() {
         hero:mt-25
         hero:px-20
       "
-    >
-      <ImersiveBG />
+      >
+        <ImersiveBG />
 
-      <div
-        className="
+        <div
+          className="
           flex flex-col
           gap-[20px]
 
@@ -46,10 +56,10 @@ export function HeroContent() {
           hero:items-start
           hero:text-left
         "
-      >
-        {/* Título */}
-        <h1
-          className="
+        >
+          {/* Título */}
+          <h1
+            className="
             text-[1.8rem]
             leading-tight
             font-semibold
@@ -58,23 +68,23 @@ export function HeroContent() {
             sm:text-[2.1rem]
             hero:text-[2.2rem]
           "
-        >
-          {"{"}
-          <span className="text-[var(--accent1)]">{t.hero.title.code}</span>
-          {"}"}
-          {t.hero.title.line1}
+          >
+            {"{"}
+            <span className="text-[var(--accent1)]">{t.hero.title.code}</span>
+            {"}"}
+            {t.hero.title.line1}
 
-          <span className="relative text-[var(--accent1)]">.</span>
+            <span className="relative text-[var(--accent1)]">.</span>
 
-          <br />
+            <br />
 
-          {t.hero.title.line2}
-          <span className="text-[var(--accent1)]">.</span>
-        </h1>
+            {t.hero.title.line2}
+            <span className="text-[var(--accent1)]">.</span>
+          </h1>
 
-        {/* Nome / Cargo */}
-        <h2
-          className="
+          {/* Nome / Cargo */}
+          <h2
+            className="
             font-dm-sans
             text-[0.95rem]
             font-bold
@@ -82,17 +92,17 @@ export function HeroContent() {
             sm:text-[1.3rem]
             hero:text-[1.2rem]
           "
-        >
-          <span className="text-[var(--text-primary)]">
-            José Pedro Bernardes
-          </span>
+          >
+            <span className="text-[var(--text-primary)]">
+              José Pedro Bernardes
+            </span>
 
-          <span className="text-[var(--accent-soft)]"> · {t.hero.role}</span>
-        </h2>
+            <span className="text-[var(--accent-soft)]"> · {t.hero.role}</span>
+          </h2>
 
-        {/* Descrição */}
-        <p
-          className="
+          {/* Descrição */}
+          <p
+            className="
             max-w-[400px]
             text-[0.85rem]
             leading-relaxed
@@ -101,18 +111,18 @@ export function HeroContent() {
             sm:text-[0.95rem]
             hero:text-[1rem]
           "
-        >
-          {t.hero.description.before}
+          >
+            {t.hero.description.before}
 
-          <span className="text-[var(--accent-soft)]">
-            {t.hero.description.highlight}
-          </span>
+            <span className="text-[var(--accent-soft)]">
+              {t.hero.description.highlight}
+            </span>
 
-          {t.hero.description.after}
-        </p>
+            {t.hero.description.after}
+          </p>
 
-        <div
-          className="
+          <div
+            className="
             w-full
             sm:w-auto
 
@@ -126,11 +136,11 @@ export function HeroContent() {
             sm:flex-row
             sm:gap-4
           "
-        >
-          {/* See My Work */}
-          <a
-            href="/projects"
-            className="
+          >
+            {/* See My Work */}
+            <a
+              href="/projects"
+              className="
               group
               flex
               items-center
@@ -162,39 +172,39 @@ export function HeroContent() {
 
               cursor-pointer
             "
-          >
-            <span>{t.hero.buttons.seeMyWork}</span>
+            >
+              <span>{t.hero.buttons.seeMyWork}</span>
 
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="
                 transition-transform
                 duration-300
                 group-hover:translate-x-1
                 group-hover:scale-160
               "
-            >
-              <path
-                d="M5 12H19M19 12L13 6M19 12L13 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
+              >
+                <path
+                  d="M5 12H19M19 12L13 6M19 12L13 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
 
-          {/* Contact Me + GitHub */}
-          <div className="flex items-center gap-3">
-            <a
-              href="https://linktr.ee/josepedrodev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+            {/* Contact Me + GitHub */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://linktr.ee/josepedrodev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                 group
                 flex
                 items-center
@@ -229,28 +239,28 @@ export function HeroContent() {
 
                 cursor-pointer
               "
-            >
-              {t.hero.buttons.contactMe}
+              >
+                {t.hero.buttons.contactMe}
 
-              <MessageCircleMore
-                size={18}
-                className="
+                <MessageCircleMore
+                  size={18}
+                  className="
                   transition-transform
                   duration-300
                   group-hover:translate-x-1
                   group-hover:scale-160
                 "
-              />
-            </a>
+                />
+              </a>
 
-            <div className="flex items-center gap-3">
-              {/* Botão LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/jose-pedro-bernardes-react"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="
+              <div className="flex items-center gap-3">
+                {/* Botão LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/jose-pedro-bernardes-react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="
                   group/button
                   flex
                   items-center
@@ -278,13 +288,13 @@ export function HeroContent() {
 
                   cursor-pointer
                 "
-              >
-                <Image
-                  src="/assets/linkedin.png"
-                  alt="LinkedIn"
-                  width={30}
-                  height={30}
-                  className="
+                >
+                  <Image
+                    src="/assets/linkedin.png"
+                    alt="LinkedIn"
+                    width={30}
+                    height={30}
+                    className="
                     opacity-70
                     transition-all
                     duration-300
@@ -292,13 +302,13 @@ export function HeroContent() {
                     group-hover/button:brightness-0
                     group-hover/button:invert
                   "
-                />
-              </a>
+                  />
+                </a>
 
-              {/* GitHub + balão (o balão só existe aqui) */}
-              <div className="relative group">
-                <span
-                  className="
+                {/* GitHub + balão (o balão só existe aqui) */}
+                <div className="relative group">
+                  <span
+                    className="
                     pointer-events-none
                     absolute
                     bottom-full
@@ -336,16 +346,16 @@ export function HeroContent() {
                     after:border-transparent
                     after:border-t-white
                   "
-                >
-                  {t.hero.github.tooltip}
-                </span>
+                  >
+                    {t.hero.github.tooltip}
+                  </span>
 
-                <a
-                  href="https://github.com/Jose-Pedro-Bernardes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.hero.github.ariaLabel}
-                  className="
+                  <a
+                    href="https://github.com/Jose-Pedro-Bernardes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t.hero.github.ariaLabel}
+                    className="
                     group/button
                     flex
                     items-center
@@ -373,29 +383,29 @@ export function HeroContent() {
 
                     cursor-pointer
                   "
-                >
-                  <Image
-                    src="/assets/githu.png"
-                    alt={t.hero.github.ariaLabel}
-                    width={30}
-                    height={30}
-                    className="
+                  >
+                    <Image
+                      src="/assets/githu.png"
+                      alt={t.hero.github.ariaLabel}
+                      width={30}
+                      height={30}
+                      className="
                       opacity-70
                       transition-all
                       duration-300
                       group-hover/button:opacity-100
                     "
-                  />
-                </a>
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="
+        {/* Scroll indicator */}
+        <div
+          className="
           absolute
           bottom-[-15%]
           hero:bottom-[-20%]
@@ -410,24 +420,25 @@ export function HeroContent() {
 
           text-[var(--text-primary)]/50
         "
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label={t.hero.scroll.ariaLabel}
         >
-          <path
-            d="M6 9L12 15L18 9"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label={t.hero.scroll.ariaLabel}
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
